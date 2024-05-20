@@ -1,4 +1,4 @@
-# Astro Starter Kit: Basics
+# BiblioVet
 
 ```sh
 npm create astro@latest -- --template basics
