@@ -3,8 +3,6 @@ import { CloseIcon } from "@components/icons/drawerIcons";
 import { Topic } from "@components/reactComponents/topic";
 import { Topics } from "@components/reactComponents/topics";
 //--- States
-import { useStore } from "@nanostores/preact";
-import { categoryID } from "@/nanostore/drawer/drawerState";
 import { categorys } from "@bd";
 
 interface Props {
@@ -16,7 +14,6 @@ export function Drawer({ category }: Props) {
   // escribe en el store importado usando `.set`
 
   //Obtener temas de la categoria
-  const $categoryID = useStore(categoryID);
   const $category = categorys[category];
 
   return (

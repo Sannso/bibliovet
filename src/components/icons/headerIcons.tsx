@@ -1,6 +1,3 @@
-interface Props {
-  size: number;
-}
 
 export function DotsIcon() {
   return (
