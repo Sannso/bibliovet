@@ -1,0 +1,16 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Header from "@components/organism/Header.astro";
+import Footer from "@components/organism/Footer.astro";
+import { ContentTopic } from "@/components/reactComponents/contentTopic";
+
+---
+
+<Layout title="Parasitologia">
+  <Header category={0} />
+  <main class="w-full">
+    <ContentTopic client:load />
+  </main>
+  <Footer/>
+</Layout>
+

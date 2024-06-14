@@ -1,0 +1,38 @@
+---
+import { RightIcon } from "../icons/homeIcons";
+
+const { data } = Astro.props;
+const link = data.link;
+---
+
+<script>
+    class OptionCard extends HTMLElement {
+      constructor() {
+        super();
+  
+        // Read the message from the data attribute.
+        const link = this.dataset.link!;
+  
+        this.addEventListener("click", () => {
+          window.location.href = link;
+        });
+      }
+    }
+  
+    customElements.define("option-card", OptionCard);
+</script>
+
+<option-card
+  class="flex justify-between cursor-pointer w-full max-w-80 bg-white bg-opacity-25 hover:bg-white hover:bg-opacity-50 rounded-lg shadow-sm px-3 py-3 transition-colors"
+  data-link={link}
+>
+  <content class="flex flex-col gap-2" onclick="">
+    <p class="text-gray-800 text-xl font-bold">{data.title}</p>
+  </content>
+
+  <aside
+    class="flex h-full items-center text-gray-900 hover:text-gray-400 transition-colors"
+  >
+    <RightIcon size={24} />
+  </aside>
+</option-card>

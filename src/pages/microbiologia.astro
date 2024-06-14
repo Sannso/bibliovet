@@ -1,0 +1,18 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Header from "@components/organism/Header.astro";
+import { ContentTopic } from "@/components/reactComponents/contentTopic";
+---
+
+<Layout title="Welcome to BiblioVet.">
+  <main class="flex flex-col items-center py-8 px-10 w-full h-full">
+    <Header category={1}/>
+    <ContentTopic client:load />
+  </main>
+</Layout>
+
+<style>
+  body {
+    height: 100%;
+  }
+</style>

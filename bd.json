@@ -1,0 +1,310 @@
+{
+  "categorys": [
+    {
+      "id": 0,
+      "category": "Parasitología",
+      "topics": [
+        {
+          "id": 100,
+          "title": "Artrópodos",
+          "subtopics": [
+            {
+              "id": 103,
+              "title": "¿Qué son los artrópodos?",
+              "content": {
+                "intro": [
+                  {
+                    "type": "normal",
+                    "text": "Son animales invertebrados que se caracterizan por tener un exoesqueleto, su cuerpo dividido en segmentos y apéndices articulados. El grupo de los artrópodos se compone de diversos organismos, como los insectos, los arácnidos y los crustáceos, se sabe que existen más de un millón de especies y se estima que hay entre cinco y diez millones. Estos animales se encuentran en casi todos los ecosistemas del planeta, cumpliendo diversas funciones tróficas que pueden ser tanto benéficas como nocivas."
+                  }
+                ]
+              }
+            },
+            {
+              "id": 104,
+              "title": "Morfología",
+              "content": {
+                "intro": [
+                  {
+                    "type": "with-subtitle",
+                    "subtitle": "Anatomía externa",
+                    "texts": [
+                      "El cuerpo de los artrópodos está cubierto por una cutícula compuesta de proteínas y quitina, la cual es segregada por las glándulas quitinógenas. Cada segmento está conformado por una placa dorsal denominada “tergo”, una placa ventral “esternón” y dos laterales denominados “pleuras”. "
+                    ]
+                  },
+                  {
+                    "type": "with-subtitle",
+                    "subtitle": "Sistema nervioso",
+                    "texts": [
+                      "Tiene sistema nervioso central conformado por los ganglios superesofágicos (proto-, deuto-, y tritocerebro) y una cadena de ganglios ventrales que incluye de 8 a 11 ganglios abdominales. El sistema nervioso sensorial que comprende estructuras como los sensilios, que son modificaciones del tegumento, estos se pueden encontrar en los ojos que pueden ser simples o compuestos y están constituidos por un cristalino y la retina."
+                    ]
+                  },
+                  {
+                    "type": "with-subtitle",
+                    "subtitle": "Aparato circulatorio",
+                    "texts": [
+                      "Su aparato circulatorio es incompletamente cerrado, el corazón es tubular y dorsal, con siete cámaras dotadas de ostiolos los cuales permiten la entrada de hemolinfa al corazón. "
+                    ]
+                  },
+                  {
+                    "type": "with-subtitle",
+                    "subtitle": "Aparato digestivo",
+                    "texts": [
+                      "Tiene un aparato digestivo completo, sus piezas bucales están adaptadas para la masticación y succión. Está formado por el estomodeo, mesenterón y proctodeo."
+                    ]
+                  },
+                  {
+                    "type": "with-subtitle",
+                    "subtitle": "Aparato respiratorio",
+                    "texts": [
+                      "El sistema respiratorio está compuesto por tráqueas para el intercambio gaseoso, aunque algunos pueden realizar el intercambio gaseoso a través del tegumento."
+                    ]
+                  },
+                  {
+                    "type": "with-subtitle",
+                    "subtitle": "Aparato excretor",
+                    "texts": [
+                      "Por último está el aparato excretor conformado por los tubos de malpighi.",
+                      "Los artrópodos de interés en la medicina veterinaria pertenecen a la clase Insecta, Arachnida, Crustacea y Diplopoda."
+                    ]
+                  }
+                ]
+              }
+            },
+            {
+              "id": 105,
+              "title": "Clase ARACHNIDA",
+              "subtopics": [
+                {
+                  "id": 106,
+                  "title": "Suborden Astigmata, ácaros astigmátidos",
+                  "content": {
+                    "intro": [
+                      {
+                        "type": "list",
+                        "items": [
+                          "No contienen estigmas y su respiración es tegumentaria.",
+                          "En este orden se encuentran los ácaros de la sarna (Familias Sarcoptidae, Knemidocoptidae y Psoroptidae). La sarna es una enfermedad donde los animales presentan prurito, alopecia e hiperplasia epidérmica con descamación. Los animales se rascan hasta provocarse heridas más profundas y serosanguinolentas, lo que podría provocar infecciones bacterianas secundarias y complicar su estado de salud.",
+                          "El método diagnóstico ideal consiste en sumergir una hoja de bisturí en glicerina, realizar un raspado suavemente en la zona afectada hasta que comience a salir sangre de la abrasión. Los detritos transferidos en la hoja con glicerina se depositan a un portaobjetos donde se observarán en el microscopio para buscar los ácaros."
+                        ]
+                      },
+                      {
+                        "type": "family",
+                        "family": "Familia Sarcoptidae",
+                        "species": [
+                          {
+                            "title": "Sarcoptes Scabiei",
+                            "textImg": {
+                              "text": [
+                                "Agente causal de la sarna sarcóptica en perros, zorros, caballos, vacunos, etc. y de la escabiosis en humanos. Es un ácaro que excava túneles por debajo de la capa superficial de la piel (estrato córneo) y depositan allí sus huevos, lo que provoca irritación y daño en la piel. La presencia de los ácaros, huevos, larvas y heces desencadenan una respuesta inmunológica en el huésped, lo que provoca inflamación, enrojecimiento y picazón intensa. "
+                              ],
+                              "img": "https://archivos-sanss.s3.amazonaws.com/imgs/bibliovet/parasitologia/sarcoptes.webp",
+                              "alt": "Sarcoptes macho (izquierda) y Sarcoptes hembra (derecha)"
+                            },
+                            "sintomas": {
+                              "text": [
+                                "Los animales que presentan esta infestación muestran signos como prurito intenso, enrojecimiento de la piel, pérdida de pelo, erupciones y formación de costras. Los ácaros son más activos en áreas como las orejas, el abdomen, las patas y los codos."
+                              ],
+                              "img": "https://archivos-sanss.s3.amazonaws.com/imgs/bibliovet/parasitologia/perrosarcoptesscabei.webp",
+                              "alt": "Canino con sarna sarcóptica"
+                            },
+                            "tratamiento": {
+                              "text": [
+                                "Lactonas macrociclícas, amitrax, organofosforados (para el ambiente), agua y ácidos grasos."
+                              ],
+                              "img": ""
+                            }
+                          },
+                          {
+                            "title": "Notoedres cati",
+                            "textImg": {
+                              "text": [
+                                "Es un parásito externo de los gatos, ratas y conejos. Causa sarna notroédica en gatos, comenzando por el borde medial del pabellón auricular y posteriormente diseminándose por toda la oreja, cara y patas. Cabe aclarar que no todos los casos de sarna en felinos son causados por este agente."
+                              ],
+                              "img": "https://archivos-sanss.s3.amazonaws.com/imgs/bibliovet/parasitologia/notoedrescati.webp",
+                              "alt": "Notoedres macho (izquierda) y Notoedres hembra (derecha)"
+                            },
+                            "sintomas": {
+                              "text": [
+                                "Las lesiones de la sarna notoédrica consisten en la alopecia, hiperqueratosis con abundante descamación epidérmica."
+                              ],
+                              "img": ""
+                            },
+                            "tratamiento": {
+                              "text": [
+                                "Benzoato de bencilo y pomadas de azufre al 3%."
+                              ],
+                              "img": ""
+                            }
+                          }
+                        ]
+                      },
+                      {
+                        "type": "family",
+                        "family": "Familia Knemidocoptidae",
+                        "species": [
+                          {
+                            "title": "Knemidocoptes mutans",
+                            "textImg": {
+                              "text": [
+                                "Este ácaro es responsable de producir descamación en las patas de los pollos, pavos, faisanes y otras aves de corral, excavando surcos en la epidermis de las patas. Esto hace que las escamas se levanten y se desprendan, lo que causa que las patas se engrosen y se deformen. La hembra de K. mutans mide 0,5 mm de diámetro, tiene patas cortas y carece de pretarsos, mientras que los machos son mucho más pequeños y tienen las patas mas largas, equipadas con pretarsos. "
+                              ],
+                              "img": "https://archivos-sanss.s3.amazonaws.com/imgs/bibliovet/parasitologia/knemidocoptes.webp",
+                              "alt": "Macho (izquierda) y hembra (derecha) de Knemidocoptes mutans. Lesiones producidas en la pata de un pollo infestado (abajo)."
+                            },
+                            "sintomas": {
+                              "text": [
+                                "Las aves infestadas presentan síntomas como las patas aumentadas de grosor con costras ásperas y espesas."
+                              ],
+                              "img": ""
+                            },
+                            "tratamiento": {
+                              "text": [
+                                "Se debe administrat amitrax, lactonas macrociclícas, organofosforados (en galpones), agua y ácidos graso."
+                              ],
+                              "img": ""
+                            }
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": 101,
+          "title": "Protozoarios",
+          "subtopics": [
+            {
+              "id": 107,
+              "title": "No hay info",
+              "content": {
+                "intro": [
+                  {
+                    "type": "normal",
+                    "text": ""
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "id": 102,
+          "title": "Helmintos",
+          "subtopics": [
+            {
+              "id": 108,
+              "title": "No hay info",
+              "content": {
+                "intro": [
+                  {
+                    "type": "normal",
+                    "text": ""
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      ]
+    },
+
+    {
+      "id": 2,
+      "category": "Microbiología",
+      "topics": [
+        {
+          "id": 100,
+          "title": "primero",
+          "subtopics": [
+            {
+              "id": 102,
+              "title": "Subtema tercer tema",
+              "content": {
+                "intro": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+              }
+            },
+            {
+              "id": 103,
+              "title": "Segundo subtema tercer tema",
+              "content": {
+                "intro": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+              }
+            },
+            {
+              "id": 104,
+              "title": "Tercer subtema tercer tema",
+              "subtopics": {
+                "intro": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+              }
+            }
+          ]
+        },
+        {
+          "id": 101,
+          "title": "segundo",
+          "subtopics": [
+            {
+              "id": 103,
+              "title": "Subtema tercer tema",
+              "content": {
+                "intro": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+                "principal": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur."
+              }
+            },
+            {
+              "id": 104,
+              "title": "Segundo subtema tercer tema",
+              "content": {
+                "intro": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+                "principal": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur."
+              }
+            },
+            {
+              "id": 105,
+              "title": "Tercer subtema tercer tema",
+              "subtopics": {
+                "intro": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+                "principal": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur."
+              }
+            }
+          ]
+        },
+        {
+          "id": 102,
+          "title": "tercero",
+          "subtopics": [
+            {
+              "id": 103,
+              "title": "Subtema tercer tema",
+              "content": {
+                "intro": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+                "principal": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur."
+              }
+            },
+            {
+              "id": 104,
+              "title": "Segundo subtema tercer tema",
+              "content": {
+                "intro": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+                "principal": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur."
+              }
+            },
+            {
+              "id": 105,
+              "title": "Tercer subtema tercer tema",
+              "subtopics": {
+                "intro": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+                "principal": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur."
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
