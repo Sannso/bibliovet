@@ -3,7 +3,7 @@
     "short_name": "BV",
     "start_url": ".",
     "background_color": "#09090b",
-    "theme_color": "#009578",
+    "theme_color": "#171717",
     "display": "standalone",
     "icons": [
         {

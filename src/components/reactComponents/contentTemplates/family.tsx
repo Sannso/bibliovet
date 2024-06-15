@@ -26,7 +26,7 @@ export function Family({ info }: Props) {
           </p>
 
           {value.textImg.img && (
-            <article class="mx-auto h-3/6 w-3/6">
+            <article class="mx-auto h-full w-full md:h-3/6 md:3/6">
               <img
                 src={value.textImg.img}
                 alt={value.textImg.alt}
@@ -36,14 +36,14 @@ export function Family({ info }: Props) {
             </article>
           )}
 
-          <article class="grid grid-cols-[3fr_2fr] gap-20 mt-10">
-            <section>
+          <article class="flex flex-col md:grid md:grid-cols-[3fr_2fr] gap-20 mt-10">
+            <section class="just-phone:flex just-phone:items-end just-phone:gap-4 just-phone:flex-col-reverse">
               {value.sintomas.img && (
                 <div class="flex flex-col h-64 w-64 float-right">
                   <img
                     src={value.sintomas.img}
                     alt={value.sintomas.alt}
-                    class="ml-4 rounded-md  mt-4"
+                    class="ml-4 rounded-md  md:mt-4"
                   />
                   <p class="text-zinc-600 pl-4 text-right">
                     Figura: {value.sintomas.alt}
