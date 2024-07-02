@@ -22,6 +22,8 @@ export function Topic({ topicInfo, id }: Props) {
           topicInformation.set(topicInfo);
         }}
         id={topicLabel}
+        data-drawer-hide="drawer-navigation"
+        aria-controls="drawer-navigation"
         type="button"
         className={`${buttonStyle} ${isThisTopicSelected && "bg-neutral-800"}`}
       >

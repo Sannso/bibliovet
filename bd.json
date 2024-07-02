@@ -105,7 +105,9 @@
                               "text": [
                                 "Los animales que presentan esta infestación muestran signos como prurito intenso, enrojecimiento de la piel, pérdida de pelo, erupciones y formación de costras. Los ácaros son más activos en áreas como las orejas, el abdomen, las patas y los codos."
                               ],
-                              "img": "https://archivos-sanss.s3.amazonaws.com/imgs/bibliovet/parasitologia/perrosarcoptesscabei.webp",
+                              "img": [
+                                "https://archivos-sanss.s3.amazonaws.com/imgs/bibliovet/parasitologia/perrosarcoptesscabei.webp"
+                              ],
                               "alt": "Canino con sarna sarcóptica"
                             },
                             "tratamiento": {
@@ -128,7 +130,8 @@
                               "text": [
                                 "Las lesiones de la sarna notoédrica consisten en la alopecia, hiperqueratosis con abundante descamación epidérmica."
                               ],
-                              "img": ""
+                              "img": [],
+                              "alt": ""
                             },
                             "tratamiento": {
                               "text": [
@@ -156,12 +159,89 @@
                               "text": [
                                 "Las aves infestadas presentan síntomas como las patas aumentadas de grosor con costras ásperas y espesas."
                               ],
-                              "img": ""
+                              "img": [],
+                              "alt": ""
                             },
                             "tratamiento": {
                               "text": [
-                                "Se debe administrat amitrax, lactonas macrociclícas, organofosforados (en galpones), agua y ácidos graso."
+                                "Se debe administrar amitrax, lactonas macrociclícas, organofosforados (en galpones), agua y ácidos graso."
                               ],
+                              "img": ""
+                            }
+                          }
+                        ]
+                      },
+                      {
+                        "type": "family",
+                        "family": "Familia Psoroptidae",
+                        "species": [
+                          {
+                            "title": "Psoroptes equi",
+                            "textImg": {
+                              "text": [
+                                "Parásito externo que afecta principalmente a los caballos, agente productor de sarna psoroptica en la crin o cola de los equinos."
+                              ],
+                              "img": "https://archivos-sanss.s3.amazonaws.com/imgs/bibliovet/parasitologia/psoroptesequi.webp",
+                              "alt": "ácaro psoroptes equi"
+                            },
+                            "sintomas": {
+                              "text": [
+                                "La sarna psoroptica produce sintomas como la alopecia, descamación y picor excesivo."
+                              ],
+                              "img": [],
+                              "alt": ""
+                            },
+                            "tratamiento": {
+                              "text": [
+                                "Amitrax, lactonas macrocíclicas, organofosforados (para los establos), agua y ácidos grasos."
+                              ],
+                              "img": ""
+                            }
+                          },
+                          {
+                            "title": "Chorioptes bovis",
+                            "textImg": {
+                              "text": [
+                                "Es un ectoparásito cosmopolita que infesta el ganado bovino, provocando sarna corióptica. Generalmente, se encuentra en la cola, región perineal y en las patas, donde se alimenta de los detritos epiteliales. Esta sarna suele aparecer en invierno y se manifiesta como una dermatitis superficial descamativa. Sin embargo, es más frecuente que la infestación sea asintomática."
+                              ],
+                              "img": "https://archivos-sanss.s3.amazonaws.com/imgs/bibliovet/parasitologia/chorioptesbovis.webp",
+                              "alt": "Macho (izquierda) y hembra (centro) de Chorioptes. Derecha, Macho y deutoninfa de Chorioptes. "
+                            },
+                            "sintomas": {
+                              "text": [
+                                "Puede haber prurito moderado, lesiones cutáneas y pérdida de pelo (alopecia)."
+                              ],
+                              "img": [
+                                "https://archivos-sanss.s3.amazonaws.com/imgs/bibliovet/parasitologia/sintomachoribovis1.webp",
+                                "https://archivos-sanss.s3.amazonaws.com/imgs/bibliovet/parasitologia/sintomachoribovis2.webp"
+                              ],
+                              "alt": "Sarna corióptica en bovinos"
+                            },
+                            "tratamiento": {
+                              "text": [
+                                "Amitrax, lactonas macrocíclicas, organofosforados (para los establos), agua y ácidos grasos."
+                              ],
+                              "img": ""
+                            }
+                          },
+                          {
+                            "title": "Otodectes cynotis",
+                            "textImg": {
+                              "text": [
+                                "Es un ácaro que parasita el conducto auditivo externo de los cánidos, produciendo otitis externa, una inflamación del oído externo que puede resultar incómoda. Este parásito se alimenta de cera, aceites y detritos cutáneos en el canal auditivo de su huésped. Su presencia y actividad provocan irritación e inflamación, lo que puede provocar infecciones secundarias bacterianas o fúngicas. "
+                              ],
+                              "img": "https://archivos-sanss.s3.amazonaws.com/imgs/bibliovet/parasitologia/otodectescynotis.webp",
+                              "alt": "Macho de O. cynotis (izquierda) y hembra (derecha)"
+                            },
+                            "sintomas": {
+                              "text": [
+                                "Puede haber prurito moderado, lesiones cutáneas y pérdida de pelo (alopecia)."
+                              ],
+                              "img": [],
+                              "alt": ""
+                            },
+                            "tratamiento": {
+                              "text": ["Selamectina"],
                               "img": ""
                             }
                           }

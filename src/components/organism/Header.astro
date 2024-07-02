@@ -1,13 +1,40 @@
 ---
 import { header } from "@es";
 import { Drawer } from "@components/organism/drawer";
+import { CloseIcon } from "@components/icons/drawerIcons";
 
 const { category } = Astro.props;
 ---
 
-<header class="flex relative w-full text-white">
+<script>
+  window.addEventListener("scroll", function () {
+    const header = document.querySelector(".header") as HTMLElement;
+    const maxScroll = 1000; // La cantidad máxima de desplazamiento donde la transición debe completarse
+    const scrollProgress = Math.min(window.scrollY / maxScroll, 1).toString();
+
+    header!.style.setProperty("--scroll-progress", scrollProgress) ;
+  });
+</script>
+
+<header class="header flex justify-between sticky top-0 shadow-lg py-3 w-full text-white z-50">
   <Drawer category={category} client:load />
   <h1 class="font-bold text-lg absolute left-2/4 -translate-x-2/4">
     {header.title}
   </h1>
+  <a href="/" class="flex items-center justify-center h-7 w-7 rounded-full bg-neutral-800 text-neutral-300 transition-colors hover:text-neutral-50 hover:bg-neutral-600"> <CloseIcon/> </a>
 </header>
+
+<style>
+  .header {
+    background-color: rgba(23, 23, 23, calc(1 - var(--scroll-progress)));
+    backdrop-filter: blur(calc(12px * var(--scroll-progress)));
+    padding-top: calc(12px * var(--scroll-progress));
+    transition:
+      background-color 0.3s ease,
+      backdrop-filter 0.3s ease;
+  }
+
+  .header.scrolled {
+    background-color: rgba(23, 23, 23, var(--scroll-progress));
+  }
+</style>
