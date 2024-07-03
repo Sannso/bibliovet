@@ -18,7 +18,7 @@ export function Drawer({ category }: Props) {
 
   return (
     <main>
-      <div class="text-center">
+      <div class="text-center flex items-center">
         <button
           class=" text-gray-300 transition-colors hover:text-white"
           type="button"

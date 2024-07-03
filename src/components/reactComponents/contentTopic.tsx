@@ -6,8 +6,7 @@ import { Normal } from "./contentTemplates/normal";
 import { WithSubtitle } from "./contentTemplates/withSubtitle";
 import { List } from "./contentTemplates/list";
 import { Family } from "./contentTemplates/family";
-import { TestingComponent } from "./contentTemplates/fortest";
-import { ImageGallery } from "./contentTemplates/reacttest";
+import { UpLeftArrowIcon } from "@components/icons/pointerIcons";
 
 export function ContentTopic() {
   const topicSelected = useStore(topicID);
@@ -16,8 +15,12 @@ export function ContentTopic() {
   return (
     <div>
       {topicSelected < 100 ? (
-        <section className="flex h-full justify-center items-center mt-40 lg:mt-52 w-64 mx-auto">
-          <h2 className="text-white text-center font-bold font-mono text-xl">
+        <section className="flex relative h-full w-full justify-center items-center mx-auto">
+          <section className="flex text-lime-700 absolute left-6 top-0 md:left-14 md:top-2 animate-pulse">
+            <UpLeftArrowIcon size={16} />
+            <p class="text-2xl font-bold pt-6">Temas</p>
+          </section>
+          <h2 className="text-white text-center font-bold font-mono text-xl mt-52 w-64">
             {parasitologia.sinseleccion}
           </h2>
         </section>
