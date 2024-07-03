@@ -32,7 +32,7 @@ export function Drawer({ category }: Props) {
 
       <div
         id="drawer-navigation"
-        class="fixed top-0 left-0 z-40 h-screen p-4 overflow-y-auto transition-transform -translate-x-full bg-white w-64 dark:bg-neutral-900"
+        class="drawer fixed top-0 left-0 z-40 h-screen p-4 overflow-y-auto transition-transform -translate-x-full w-64 bg-neutral-900"
         aria-labelledby="drawer-navigation-label"
       >
         <h5
@@ -53,22 +53,21 @@ export function Drawer({ category }: Props) {
         <div class="py-4 overflow-y-auto">
           <ul class="space-y-2 font-medium">
             {$category &&
-              $category.topics!.map((value: any) =>
-                {
-                  if ('subtopics' in value) {
-                    return <Topics
-                    key={value.id}
-                    mytopic={value.title}
-                    subtopics={value.subtopics}
-                  />;
-                  } else {
-                    return (
-                      <Topic key={value.id} id={value.id} topicInfo={value} />
-                    );
-                  }
-
+              $category.topics!.map((value: any) => {
+                if ("subtopics" in value) {
+                  return (
+                    <Topics
+                      key={value.id}
+                      mytopic={value.title}
+                      subtopics={value.subtopics}
+                    />
+                  );
+                } else {
+                  return (
+                    <Topic key={value.id} id={value.id} topicInfo={value} />
+                  );
                 }
-              )}
+              })}
           </ul>
         </div>
       </div>
