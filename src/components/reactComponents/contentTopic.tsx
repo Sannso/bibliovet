@@ -7,6 +7,7 @@ import { WithSubtitle } from "./contentTemplates/withSubtitle";
 import { List } from "./contentTemplates/list";
 import { Family } from "./contentTemplates/family";
 import { UpLeftArrowIcon } from "@components/icons/pointerIcons";
+import { SimpleTitle } from "./contentTemplates/simpleTitle";
 
 export function ContentTopic() {
   const topicSelected = useStore(topicID);
@@ -25,7 +26,7 @@ export function ContentTopic() {
         </section>
       ) : (
         <section className="flex flex-col justify-center max-w-5xl mx-auto px-8 mt-10 gap-4">
-          <h2 className="text-gray-400 text-justify font-bold font-mono text-xl">
+          <h2 className="text-gray-300 text-justify font-bold font-mono text-xl">
             {"title" in topicInfoSelected && topicInfoSelected.title}
           </h2>
           {"content" in topicInfoSelected &&
@@ -42,6 +43,8 @@ export function ContentTopic() {
                 return <List key={index} info={value} />;
               } else if (value.type === "family" && "species" in value) {
                 return <Family key={index} info={value} />;
+              } else if (value.type === "title" && "title" in value) {
+                return <SimpleTitle key={index} info={value} />;
               } else {
                 return (
                   <p class="text-gray-400 text-justify font-mono text-lg">

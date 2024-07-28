@@ -4,7 +4,7 @@
 export function LeftArrowIcon() {
   return (
     <svg
-      class="w-4 h-4 text-neutral-800  dark:text-neutral-400 rtl:rotate-180 hover:text-neutral-500 dark:hover:text-neutral-200 transition-colors"
+      class="w-4 h-4 text-neutral-800  dark:text-neutral-300 rtl:rotate-180 hover:text-neutral-500 dark:hover:text-neutral-200 transition-colors"
       aria-hidden="true"
       xmlns="http://www.w3.org/2000/svg"
       fill="none"
@@ -24,7 +24,7 @@ export function LeftArrowIcon() {
 export function RightArrowIcon() {
   return (
     <svg
-      class="w-4 h-4 text-neutral-800  dark:text-neutral-400 rtl:rotate-180 hover:text-neutral-500 dark:hover:text-neutral-200 transition-colors"
+      class="w-4 h-4 text-neutral-800  dark:text-neutral-300 rtl:rotate-180 hover:text-neutral-500 dark:hover:text-neutral-200 transition-colors"
       aria-hidden="true"
       xmlns="http://www.w3.org/2000/svg"
       fill="none"

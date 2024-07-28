@@ -77,9 +77,13 @@
               "subtopics": [
                 {
                   "id": 106,
-                  "title": "Suborden Astigmata, ácaros astigmátidos",
+                  "title": "Ácaros",
                   "content": {
                     "intro": [
+                      {
+                        "type": "title",
+                        "title": "Suborden Astigmata, ácaros astigmátidos"
+                      },
                       {
                         "type": "list",
                         "items": [
@@ -96,10 +100,14 @@
                             "title": "Sarcoptes Scabiei",
                             "textImg": {
                               "text": [
-                                "Agente causal de la sarna sarcóptica en perros, zorros, caballos, vacunos, etc. y de la escabiosis en humanos. Es un ácaro que excava túneles por debajo de la capa superficial de la piel (estrato córneo) y depositan allí sus huevos, lo que provoca irritación y daño en la piel. La presencia de los ácaros, huevos, larvas y heces desencadenan una respuesta inmunológica en el huésped, lo que provoca inflamación, enrojecimiento y picazón intensa. "
+                                "Agente causal de la sarna sarcóptica en perros, zorros, caballos, vacunos, etc. y de la escabiosis en humanos. Es un ácaro que excava túneles por debajo de la capa superficial de la piel (estrato córneo) y allí depositan sus huevos, lo que provoca irritación y daño en la piel. La presencia de los ácaros, huevos, larvas y heces desencadenan una respuesta inmunológica en el huésped, provocando inflamación, enrojecimiento y picazón intensa."
                               ],
-                              "img": "https://archivos-sanss.s3.amazonaws.com/imgs/bibliovet/parasitologia/sarcoptes.webp",
-                              "alt": "Sarcoptes macho (izquierda) y Sarcoptes hembra (derecha)"
+                              "img": [
+                                "https://archivos-sanss.s3.amazonaws.com/imgs/bibliovet/parasitologia/sarcoptes.webp"
+                              ],
+                              "alt": [
+                                "Sarcoptes macho (izquierda) y Sarcoptes hembra (derecha)"
+                              ]
                             },
                             "sintomas": {
                               "text": [
@@ -112,7 +120,7 @@
                             },
                             "tratamiento": {
                               "text": [
-                                "Lactonas macrociclícas, amitrax, organofosforados (para el ambiente), agua y ácidos grasos."
+                                "En caninos, el mejor tratamiento de elección es la selamectina. Se puede administrar moxidectina (2,5% peso/vol), aplicación subcutánea de ivermectina. También se puede aplicar otros acaricidas eficaces como el amitraz, benzoato de bencilo, sulfuro de lima, fosmet y la rotenona."
                               ],
                               "img": ""
                             }
@@ -121,21 +129,27 @@
                             "title": "Notoedres cati",
                             "textImg": {
                               "text": [
-                                "Es un parásito externo de los gatos, ratas y conejos. Causa sarna notroédica en gatos, comenzando por el borde medial del pabellón auricular y posteriormente diseminándose por toda la oreja, cara y patas. Cabe aclarar que no todos los casos de sarna en felinos son causados por este agente."
+                                "Es un parásito externo de los gatos, ratas y conejos. Causa sarna notoédrica en gatos, comenzando por el borde medial del pabellón auricular y posteriormente diseminándose por toda la oreja, cara y patas. Esta enfermedad parasitaria es muy contagiosa entre los gatos y puede afectar a los humanos. Cabe aclarar que no todos los casos de sarna en felinos son causados por este agente."
                               ],
-                              "img": "https://archivos-sanss.s3.amazonaws.com/imgs/bibliovet/parasitologia/notoedrescati.webp",
-                              "alt": "Notoedres macho (izquierda) y Notoedres hembra (derecha)"
+                              "img": [
+                                "https://archivos-sanss.s3.amazonaws.com/imgs/bibliovet/parasitologia/notoedrescati.webp"
+                              ],
+                              "alt": [
+                                "Notoedres macho (izquierda) y Notoedres hembra (derecha)"
+                              ]
                             },
                             "sintomas": {
                               "text": [
-                                "Las lesiones de la sarna notoédrica consisten en la alopecia, hiperqueratosis con abundante descamación epidérmica."
+                                "Las manifestaciones clinícas que presentan los gatos afectados por este ácaro son: prurito intenso, papulocostras eritematosas, alopecia, seborrea y pioderma. Si la enfermedad no es tratada a tiempo se puede cronificar presentando hiperqueratosis e hiperpigmentación."
                               ],
-                              "img": [],
-                              "alt": ""
+                              "img": [
+                                "https://archivos-sanss.s3.amazonaws.com/imgs/bibliovet/parasitologia/notoedrescatitratamiento.webp"
+                              ],
+                              "alt": "Gato afectado por la sarna notoedrica causada por Notoedres cati"
                             },
                             "tratamiento": {
                               "text": [
-                                "Benzoato de bencilo y pomadas de azufre al 3%."
+                                "Administración de selamectina vía topica, ivermectina (0,3 mg/kp). Bañar al paciente, sumergirlo o lavarlo con sulfuro de lima en agua caliente. El tratamiento debe ser aplicado una vez a la semana por minímo 6 semanas. "
                               ],
                               "img": ""
                             }
@@ -150,10 +164,14 @@
                             "title": "Knemidocoptes mutans",
                             "textImg": {
                               "text": [
-                                "Este ácaro es responsable de producir descamación en las patas de los pollos, pavos, faisanes y otras aves de corral, excavando surcos en la epidermis de las patas. Esto hace que las escamas se levanten y se desprendan, lo que causa que las patas se engrosen y se deformen. La hembra de K. mutans mide 0,5 mm de diámetro, tiene patas cortas y carece de pretarsos, mientras que los machos son mucho más pequeños y tienen las patas mas largas, equipadas con pretarsos. "
+                                "Este ácaro también conocido como “ácaro de las patas escamosas” es el responsable de producir descamación en las patas de los pollos, pavos, faisanes y otras aves de corral, excavando surcos en la epidermis de las patas. Esto hace que las escamas se levanten y se desprendan, lo que causa que las patas se engrosen y se deformen, causando la patología conocida como “patas roñosas o sarnosas”, “patas elefantiasicas”. La infección se transmite de un ave a otra, cuando las escamas de las patas afectadas caen al suelo y otras aves la pisan. "
                               ],
-                              "img": "https://archivos-sanss.s3.amazonaws.com/imgs/bibliovet/parasitologia/knemidocoptes.webp",
-                              "alt": "Macho (izquierda) y hembra (derecha) de Knemidocoptes mutans. Lesiones producidas en la pata de un pollo infestado (abajo)."
+                              "img": [
+                                "https://archivos-sanss.s3.amazonaws.com/imgs/bibliovet/parasitologia/knemidocoptes.webp"
+                              ],
+                              "alt": [
+                                "Macho (izquierda) y hembra (derecha) de Knemidocoptes mutans. Lesiones producidas en la pata de un pollo infestado (abajo)."
+                              ]
                             },
                             "sintomas": {
                               "text": [
@@ -164,7 +182,7 @@
                             },
                             "tratamiento": {
                               "text": [
-                                "Se debe administrar amitrax, lactonas macrociclícas, organofosforados (en galpones), agua y ácidos graso."
+                                "Primero se deben aislar las aves afectadas para evitar que sigan contagiando otras aves. Se puede administar piretroides, bromociclenos, organofosforados, etc. Sin embargo, el tratamiento de elección es el uso de ivermectina 0,2 mg/ kg pv, repetida a la semana, o también aplicarla directamente sobre la piel 0,4 - 20 mg/ kg pv. Para la eliminación de las costras se deben realizar lavados en caliente con soda caustica al 5%."
                               ],
                               "img": ""
                             }
@@ -181,8 +199,10 @@
                               "text": [
                                 "Parásito externo que afecta principalmente a los caballos, agente productor de sarna psoroptica en la crin o cola de los equinos."
                               ],
-                              "img": "https://archivos-sanss.s3.amazonaws.com/imgs/bibliovet/parasitologia/psoroptesequi.webp",
-                              "alt": "ácaro psoroptes equi"
+                              "img": [
+                                "https://archivos-sanss.s3.amazonaws.com/imgs/bibliovet/parasitologia/psoroptesequi.webp"
+                              ],
+                              "alt": ["ácaro psoroptes equi"]
                             },
                             "sintomas": {
                               "text": [
@@ -199,22 +219,19 @@
                             }
                           },
                           {
-                            "title": "Chorioptes bovis",
+                            "title": "Psoroptes Ovis",
                             "textImg": {
                               "text": [
-                                "Es un ectoparásito cosmopolita que infesta el ganado bovino, provocando sarna corióptica. Generalmente, se encuentra en la cola, región perineal y en las patas, donde se alimenta de los detritos epiteliales. Esta sarna suele aparecer en invierno y se manifiesta como una dermatitis superficial descamativa. Sin embargo, es más frecuente que la infestación sea asintomática."
+                                "Es el agente productor de sarna en ovinos. En lugar de excavar túneles en la epidermis, permanece en la base de los pelos y taladra la piel con sus quelíceros, utilizandolos como estilete. Su forma de alimentarse provoca un exudado seroso en la piel, que se endurece hasta formar costras. "
                               ],
-                              "img": "https://archivos-sanss.s3.amazonaws.com/imgs/bibliovet/parasitologia/chorioptesbovis.webp",
-                              "alt": "Macho (izquierda) y hembra (centro) de Chorioptes. Derecha, Macho y deutoninfa de Chorioptes. "
+                              "img": [],
+                              "alt": [""]
                             },
                             "sintomas": {
                               "text": [
-                                "Puede haber prurito moderado, lesiones cutáneas y pérdida de pelo (alopecia)."
+                                "Los ovinos infestados presentan síntomas como el prurito intenso, lesiones cutáneas, alopecia y pérdida de condición corporal (debido al estrés). "
                               ],
-                              "img": [
-                                "https://archivos-sanss.s3.amazonaws.com/imgs/bibliovet/parasitologia/sintomachoribovis1.webp",
-                                "https://archivos-sanss.s3.amazonaws.com/imgs/bibliovet/parasitologia/sintomachoribovis2.webp"
-                              ],
+                              "img": [],
                               "alt": "Sarna corióptica en bovinos"
                             },
                             "tratamiento": {
@@ -225,23 +242,226 @@
                             }
                           },
                           {
-                            "title": "Otodectes cynotis",
+                            "title": "Chorioptes bovis",
                             "textImg": {
                               "text": [
-                                "Es un ácaro que parasita el conducto auditivo externo de los cánidos, produciendo otitis externa, una inflamación del oído externo que puede resultar incómoda. Este parásito se alimenta de cera, aceites y detritos cutáneos en el canal auditivo de su huésped. Su presencia y actividad provocan irritación e inflamación, lo que puede provocar infecciones secundarias bacterianas o fúngicas. "
+                                "Es un ectoparásito cosmopolita que infesta principalmente al ganado bovino, provocando sarna corióptica o sarna de las patas. Generalmente, se encuentra en la cola, región perineal y en las patas, donde se alimenta de los detritos epiteliales, ya que este ectoparásito no excava por debajo de la piel. Esta sarna suele aparecer en invierno y se manifiesta como una dermatitis superficial descamativa. Sin embargo, es más frecuente que la infestación sea asintomática."
                               ],
-                              "img": "https://archivos-sanss.s3.amazonaws.com/imgs/bibliovet/parasitologia/otodectescynotis.webp",
-                              "alt": "Macho de O. cynotis (izquierda) y hembra (derecha)"
+                              "img": [
+                                "https://archivos-sanss.s3.amazonaws.com/imgs/bibliovet/parasitologia/chorioptesbovis.webp"
+                              ],
+                              "alt": [
+                                "Macho (izquierda) y hembra (centro) de Chorioptes. Derecha, Macho y deutoninfa de Chorioptes."
+                              ]
                             },
                             "sintomas": {
                               "text": [
-                                "Puede haber prurito moderado, lesiones cutáneas y pérdida de pelo (alopecia)."
+                                "Puede haber prurito moderado, lesiones cutáneas y pérdida de pelo (alopecia), exudado seco."
+                              ],
+                              "img": [
+                                "https://archivos-sanss.s3.amazonaws.com/imgs/bibliovet/parasitologia/sintomachoribovis1.webp",
+                                "https://archivos-sanss.s3.amazonaws.com/imgs/bibliovet/parasitologia/sintomachoribovis2.webp"
+                              ],
+                              "alt": "Sarna corióptica en bovinos"
+                            },
+                            "tratamiento": {
+                              "text": [
+                                "Administración de lactonas macrociclicas, amitraz, IGR, organofosforados para la estabulaciones ya que su incidencia aumenta en ellas."
+                              ],
+                              "img": ""
+                            }
+                          },
+                          {
+                            "title": "Otodectes cynotis",
+                            "textImg": {
+                              "text": [
+                                "Es un ácaro que parasita a caninos y felinos, es un habitante del conducto auditivo externo, Provoca otitis externa, ocasionando inflamación del conducto, acompañado de un exudado ceruminoso. Este parásito se alimenta de cera, aceites y detritos cutáneos en el canal auditivo de su huésped. Su presencia y actividad provocan irritación e inflamación, lo que puede provocar infecciones secundarias bacterianas o fúngicas."
+                              ],
+                              "img": [
+                                "https://archivos-sanss.s3.amazonaws.com/imgs/bibliovet/parasitologia/otodectescynotis.webp",
+                                "https://archivos-sanss.s3.amazonaws.com/imgs/bibliovet/parasitologia/otodectescynotis2.webp"
+                              ],
+                              "alt": [
+                                "Macho de O. cynotis (izquierda) y hembra (derecha)",
+                                "Hembra y huevo de O. cynotis obtenidos de un exudado del canal auditivo de un gato"
+                              ]
+                            },
+                            "sintomas": {
+                              "text": [
+                                "Los pacientes pueden presentar exudado céreo marrón, prurito intenso, otitis bilateral eritemo-ceruminosa. Por el prurito intenso, el paciente puede presentar lesiones perifericas por el rascado excesivo."
+                              ],
+                              "img": [
+                                "https://archivos-sanss.s3.amazonaws.com/imgs/bibliovet/parasitologia/otodectescynotissintomas1.webp",
+                                "https://archivos-sanss.s3.amazonaws.com/imgs/bibliovet/parasitologia/otodectescynotissintomas2.webp"
+                              ],
+                              "alt": "Conductos auditivos de un perro (A) y un gato (B) con otitis eritemo-ceruminosa producido por Otodectes cynotis. El perro presenta cerumen y sangre en el canal auditivo y el gato presenta cerumen obscuro (Foto por MVZ. Susy Estefanía Hau Can)."
+                            },
+                            "tratamiento": {
+                              "text": [
+                                "El tratamiento en caninos y felinos se realiza administrando agentes ceruminolíticos para remover el cerumen, piretroides, lactonas macrociclicas (selamectina) e imidacoprid. "
+                              ],
+                              "img": ""
+                            }
+                          }
+                        ]
+                      },
+                      {
+                        "type": "title",
+                        "title": "Suborden Mesostigmata, ácaros mesostigmátidos"
+                      },
+                      {
+                        "type": "list",
+                        "items": [
+                          "Los ácaros mesostigmátidos se caracterizan por tener estigmas los cuales son orificios naturales para su respiración, a diferencia de los ácaros astigmátidos que su respiración es tegumentaria.",
+                          "En este suborden hablaremos de los ácaros de la familia Dermanyssidae y Varroidae."
+                        ]
+                      },
+                      {
+                        "type": "family",
+                        "family": "Familia Dermanyssidae",
+                        "species": [
+                          {
+                            "title": "Dermanyssus gallinae",
+                            "textImg": {
+                              "text": [
+                                "Estos ácaros, también conocidos como ácaros rojos de las aves, son los responsables de causar dermatitis en las patas, anemia y estrés.  Durante el día, se esconden en los nidos o superficies y, por la noche, atacan a las aves para alimentarse de su sangre. Los adultos de este género tienen la capacidad de extraer suficiente sangre como para causar la muerte en polluelos o bajar la producción de huevos. Los ácaros rojos también son vectores de enfermedades como el virus de la enfermedad de newcastle, el virus de la viruela aviar, Salmonella sp, etc. "
+                              ],
+                              "img": ["https://archivos-sanss.s3.amazonaws.com/imgs/bibliovet/parasitologia/dermanysusgallinae1.webp", "https://archivos-sanss.s3.amazonaws.com/imgs/bibliovet/parasitologia/dermanysusgallinae2.webp"],
+                              "alt": [
+                                "ácaros rojos en superficies de un galpón",
+                                "Dermanyssus gallinae"
+                              ]
+                            },
+                            "sintomas": {
+                              "text": [
+                                "Las aves pueden presentar estrés, picoteo excesivo, costras en sus patas, pérdida de plumas, irritación, palidez e inflamación de la piel."
+                              ],
+                              "img": ["https://archivos-sanss.s3.amazonaws.com/imgs/bibliovet/parasitologia/dermanysusgallinaesintomas.webp"],
+                              "alt": "Pollo de engorde con signos claros de anemia por los ácaros rojos"
+                            },
+                            "tratamiento": {
+                              "text": ["Moxadectina"],
+                              "img": ""
+                            }
+                          }
+                        ]
+                      },
+                      {
+                        "type": "family",
+                        "family": "Familia Varroidae",
+                        "species": [
+                          {
+                            "title": "Varroa destructor",
+                            "textImg": {
+                              "text": [
+                                "Es un parásito externo que afecta a las abejas melíferas, es considerado uno de los principales problemas en la apicultura debido a su impacto devastador en las colonias de las abejas. Los ácaros parasitan las larvas de los zánganos y se reproducen dentro de las celdas operculadas de las obreras y los zánganos. Para poder alimentarse debe penetrar la piel inter segmentaria entre la esclerótica abdominal de las abejas adultas para ingerir la hemolinfa y tejidos grasos. Varroa destructor puede ser vector de distintas enfermedades virales: virus de las alas deformadas, virus de las parálisis agudas de las abejas, el virus de la parálisis aguda israelí y el virus de Cachemira."
+                              ],
+                              "img": ["https://archivos-sanss.s3.amazonaws.com/imgs/bibliovet/parasitologia/varroadestructor1.jpg", "https://archivos-sanss.s3.amazonaws.com/imgs/bibliovet/parasitologia/varroadestructor2.jpg"],
+                              "alt": [
+                                "Ácaro Varroa destructor",
+                                "Varroa en A. melifera. Fotografía cedida por  el Dr. Rob Manning"
+                              ]
+                            },
+                            "sintomas": {
+                              "text": [
+                                "Muchas veces los signos clínicos se manifiestan por las enfermedades virales transmitidas que por el mismo parasitismo. Si no se hace un control de los parásitos adecuado, las colonias pueden acabarse entre 1 y 4 años."
+                              ],
+                              "img": [],
+                              "alt": "Pollo de engorde con signos claros de anemia por los ácaros rojos"
+                            },
+                            "tratamiento": {
+                              "text": [
+                                "Flumetrina, fluvalinato, ácido oxálico, ácido fórmico o timol."
+                              ],
+                              "img": ""
+                            }
+                          }
+                        ]
+                      },
+                      {
+                        "type": "title",
+                        "title": "Suborden Prostigmata, ácaros prostigmátidos"
+                      },
+                      {
+                        "type": "family",
+                        "family": "Familia Demodicidae",
+                        "species": [
+                          {
+                            "title": "Demodex spp",
+                            "textImg": {
+                              "text": [
+                                "Las diferentes especies de ácaros del género demodex son habitantes comensales de la piel, que viven en los folículos pilosos y glándulas sebáceas en pequeñas cantidades. Suelen alimentarse de restos celulares y sebo. La patogenia se presenta por tres factores: primero, cuando hay un crecimiento anormal de la población de ácaros del género demodex dentro del folículo piloso (efecto mecánico); segundo, el efecto inmuno-patológico, que son producidos por los antígenos liberados por las mudas de los parásitos, productos de su metabolismo y lisis de los tejidos afectados; finalmente, por la ineficacia del sistema inmunitario de algunos animales. En humanos, la enfermedad que provoca es conocida como demodicosis, mientras que en animales se conoce como  sarna demodecia. La especie que se encarga de provocar demodicosis en humanos es Demodex folliculorum, mientras que en los caninos es Demodex canis; sin embargo hay posibilidades de que existen otras dos especies responsables de esta enfermedad: Demodex injai y Demodex cornei."
+                              ],
+                              "img": ["https://archivos-sanss.s3.amazonaws.com/imgs/bibliovet/parasitologia/demodexspp.webp"],
+                              "alt": ["Demodex folliculorum"]
+                            },
+                            "sintomas": {
+                              "text": [
+                                "Los animales afectados presentan: alopecia, hiperpigmentación, hiperqueratosis y mal olor. "
+                              ],
+                              "img": ["https://archivos-sanss.s3.amazonaws.com/imgs/bibliovet/parasitologia/demodexsppsintomas.webp"],
+                              "alt": "Cánino con sarna demodécica"
+                            },
+                            "tratamiento": {
+                              "text": [
+                                "Amitrax, lactonas macrocíclicas, organofosforados, IGR, agua, ácidos graso."
+                              ],
+                              "img": ""
+                            }
+                          }
+                        ]
+                      },
+                      {
+                        "type": "family",
+                        "family": "Familia Trombiculidae",
+                        "species": [
+                          {
+                            "title": "Trombicula spp",
+                            "textImg": {
+                              "text": [
+                                "Este ácaro se conoce como “ácaro de las cosechas” o “ácaro rojo”. Son más comunes en Europa y suelen ser más activos en verano y otoño. Solo las larvas son parásitas y se alimentan de la piel de diferentes animales, incluyendo los humanos. Las larvas permanecen durante varios días en la piel del hospedador, al picar inyecta su saliva y destruye las células del hospedador y el material que resulte, el ácaro lo consume. Provoca dermatitis en las zonas afectadas por el ácaro y un prurito muy intenso hasta que las niguas se desprendan."
+                              ],
+                              "img": ["https://archivos-sanss.s3.amazonaws.com/imgs/bibliovet/parasitologia/trombiculaspp.webp"],
+                              "alt": ["ácaro de Trombicula irritans"]
+                            },
+                            "sintomas": {
+                              "text": [
+                                "Los pacientes pueden presentar: Prurito intenso en: patas, abdomen, orejas y rostro; enrojecimiento e inflamación de la piel, presencia de pequeñas costras anaranjadas o rojas, perdida de pelo por el rascado excesivo."
                               ],
                               "img": [],
                               "alt": ""
                             },
                             "tratamiento": {
-                              "text": ["Selamectina"],
+                              "text": ["Administrar pietrinas e ivermectina."],
+                              "img": ""
+                            }
+                          }
+                        ]
+                      },
+                      {
+                        "type": "family",
+                        "family": "Familia Tarsonemidae",
+                        "species": [
+                          {
+                            "title": "Acarapis woodi",
+                            "textImg": {
+                              "text": [
+                                "Es un ácaro que parasita las tráqueas de las abejas melíferas, pudiendo acumular una gran cantidad de ácaros en los tubos traqueales, alimentándose de la hemolinfa de las abejas. Se pueden encontrar también en los sacos aéreos de la cabeza, tórax y abdomen. La enfermedad parasitaria que causa es la acarapisosis."
+                              ],
+                              "img": ["https://archivos-sanss.s3.amazonaws.com/imgs/bibliovet/parasitologia/acarapiswoodi.webp"],
+                              "alt": [
+                                "Presencia de Acarapis woodi en tráqueas de abejas melíferas."
+                              ]
+                            },
+                            "sintomas": {
+                              "text": [
+                                "No hay signos clínicos característicos de la enfermedad, aparte de la disminución de la población de las colonias. Los ácaros solamente se pueden diagnosticar mediante métodos de laboratorio y microscopía."
+                              ],
+                              "img": [],
+                              "alt": ""
+                            },
+                            "tratamiento": {
+                              "text": ["No hay 💀"],
                               "img": ""
                             }
                           }

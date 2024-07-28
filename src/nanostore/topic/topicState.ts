@@ -11,7 +11,8 @@ export type TopicType =
           | [{ type: string; text: string }]
           | [{ type: string; subtitle: string; texts: string[] }]
           | [{ type: string; items: string[]}]
-          | [{ type: string; family: string; species: string[] }];
+          | [{ type: string; family: string; species: string[] }]
+          | [{ type: string; title: string;}];
       };
     }
   | {};
