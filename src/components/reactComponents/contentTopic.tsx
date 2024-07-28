@@ -17,9 +17,6 @@ export function ContentTopic() {
     <div>
       {topicSelected < 100 ? (
         <section className="flex relative h-full w-full justify-center items-center mx-auto">
-          <section className="flex text-lime-700 absolute left-6 top-0 md:left-14 md:top-2 animate-pulse">
-            <UpLeftArrowIcon size={80} />
-          </section>
           <h2 className="text-white text-center font-bold font-mono text-xl mt-52 w-64">
             {parasitologia.sinseleccion}
           </h2>
