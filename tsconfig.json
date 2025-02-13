@@ -6,6 +6,8 @@
     "baseUrl": ".",
     "paths": {
       "@components/*": ["src/components/*"],
+      "@layouts/*": ["src/layouts/*"],
+      "@lib/*": ["src/lib/*"],
       "@es":["./es.json"],
       "@bd":["./bd.json"],
       "@/*": [

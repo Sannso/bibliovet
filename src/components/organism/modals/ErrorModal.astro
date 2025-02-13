@@ -1,0 +1,43 @@
+<div class="relative w-full max-w-md max-h-full top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2" data-modal="small-modal">
+  <!-- Modal content -->
+  <div class="relative bg-white rounded-lg shadow-sm dark:bg-gray-700">
+    <!-- Modal header -->
+    <div
+      class="flex items-center justify-between p-4 md:p-5 border-b rounded-t dark:border-gray-600 border-gray-200"
+    >
+      <h3 class="text-xl font-medium text-red-800 dark:text-red-500">Error</h3>
+    </div>
+    <!-- Modal body -->
+    <div class="p-4 md:p-5 space-y-4">
+      <p class="text-base leading-relaxed text-gray-500 dark:text-gray-400">
+        Sobrepasaste el límite de tamaño permitido.
+      </p>
+      <p class="text-base leading-relaxed text-gray-500 dark:text-gray-400">
+        Recomendación: Sube una imagen con un tamaño menor a 30KB. Puedes usar
+        el link recomendado para reducir el tamaño de tu imagen y se
+        recomenienda transformarla a formato .webp
+      </p>
+    </div>
+    <!-- Modal footer -->
+    <div
+      class="flex items-center p-4 md:p-5 border-t border-gray-200 rounded-b dark:border-gray-600"
+    >
+      <button
+        id="errorModalButton"
+        type="button"
+        class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+        >Aceptar</button
+      >
+    </div>
+  </div>
+</div>
+
+<script>
+    const errorModal = document.querySelector("#small-modal");
+    const errorModalButton = document.querySelector("#errorModalButton");
+
+    errorModalButton!.addEventListener("click", () => {
+        errorModal!.classList.add("hidden");
+    });
+    
+</script>

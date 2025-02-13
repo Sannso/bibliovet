@@ -1,4 +1,4 @@
-
+/*
 const urls = ["./", "./images/vaca192.webp"]
 
 self.addEventListener("install", (e) => {
@@ -18,3 +18,4 @@ self.addEventListener("fetch", (e) => {
     })
   );
 });
+*/

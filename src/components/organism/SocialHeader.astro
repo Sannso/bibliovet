@@ -1,0 +1,42 @@
+---
+import { header } from "@es";
+
+const { category } = Astro.props;
+---
+
+<script>
+  window.addEventListener("scroll", function () {
+    const header = document.querySelector(".header") as HTMLElement;
+    const maxScroll = 1000; // La cantidad máxima de desplazamiento donde la transición debe completarse
+    const scrollProgress = Math.min(window.scrollY / maxScroll, 1).toString();
+
+    header!.style.setProperty("--scroll-progress", scrollProgress);
+  });
+</script>
+
+<header
+  class="header flex items-center justify-between sticky h-12 md:h-14 px-5 top-0 shadow-lg w-full text-white z-50"
+>
+  <div></div>
+  <a
+    href="/"
+    class="font-bold text-lg absolute left-2/4 -translate-x-2/4 hover:scale-110 transition-transform">
+    {header.title}
+  </a>
+  <form action="/api/auth/signout">
+    <button
+      class="text-red-500 opacity-70 font-semibold backdrop-blur-md bg-white bg-opacity-5 rounded-xl shadow-lg px-2.5 py-0.5 hover:bg-opacity-10 transition-colors text-sm lg:text-base"
+      type="submit">Cerrar Sesión</button
+    >
+  </form>
+</header>
+
+<style>
+  .header {
+    background-color: rgba(23, 23, 23, calc(1 - var(--scroll-progress)));
+    backdrop-filter: blur(calc(12px * var(--scroll-progress)));
+    transition:
+      background-color 0.3s ease,
+      backdrop-filter 0.3s ease;
+  }
+</style>

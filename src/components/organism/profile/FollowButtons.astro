@@ -1,0 +1,100 @@
+---
+import { Plus } from "@components/icons/buttonIcons";
+
+const { buttonState, id, buttonContent} = Astro.props;
+
+---
+<div class="flex gap-1">
+    <div
+      id="friend-badge"
+      class="hidden bg-indigo-700 text-white px-2 py-0.5 rounded-lg mt-5 font-bold text-sm"
+    >
+      Amigos
+    </div>
+
+    <button
+      id="follow-button"
+      data-follow-state={buttonState}
+      data-user-id={id}
+      class="flex items-center bg-lime-500 px-2 py-0.5 rounded-lg mt-5 font-bold text-sm hover:text-white transition-all"
+    >
+      <span class="mr-1">{buttonContent}</span>
+      <div id="follow-button-svg" class="hidden">
+        <Plus size={18} stroke={3} />
+      </div>
+    </button>
+</div>
+
+<style>
+    .follow-button {
+        @apply hover:bg-indigo-700;
+    }
+
+    .unfollow-button {
+        @apply hover:bg-red-700;
+    }
+</style>
+
+<script>
+    // Verificar si ya se sigue o no al usuario
+    const followButton = document.getElementById("follow-button")!;
+    const buttonSVG = document.querySelector("#follow-button-svg")!;
+    const friendBadge = document.querySelector("#friend-badge")!;
+  
+    if (followButton.dataset.followState == "follow") { // Para estados iniciales
+      buttonSVG.classList.remove("hidden");
+      followButton.classList.add("follow-button"); 
+    }
+    else{
+      friendBadge.classList.remove("hidden");
+      followButton.classList.add("unfollow-button");
+    }
+  
+    followButton.addEventListener("click", async () => {
+      // Solo corre en modo invitado
+      const buttonValue = document.querySelector("#follow-button span")!;
+      const url = import.meta.env.DEV
+        ? "http://localhost:4321"
+        : "https://qpets.vercel.app";
+  
+      if (followButton.dataset.followState == "follow") {
+        const { status } = await fetch(`${url}/api/follow-actions`, {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({
+            follow_state: followButton.dataset.followState,
+            following_id: followButton.dataset.userId,
+          }),
+        });
+  
+        followButton.dataset.followState = "unfollow";
+        buttonValue.innerHTML = "Dejar de seguir";
+        buttonSVG.classList.add("hidden");
+        friendBadge.classList.remove("hidden");
+
+        followButton.classList.remove("follow-button");
+        followButton.classList.add("unfollow-button");
+      } else {
+        const { status } = await fetch(`${url}/api/follow-actions`, {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({
+            follow_state: followButton.dataset.followState,
+            following_id: followButton.dataset.userId,
+          }),
+        });
+  
+        followButton.dataset.followState = "follow";
+        buttonValue.innerHTML = "Seguir";
+        buttonSVG.classList.remove("hidden");
+        friendBadge.classList.add("hidden");
+
+        followButton.classList.remove("unfollow-button");
+        followButton.classList.add("follow-button");
+      }
+    });
+  </script>

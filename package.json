@@ -10,18 +10,19 @@
     "astro": "astro"
   },
   "dependencies": {
-    "@astrojs/check": "^0.7.0",
-    "@astrojs/preact": "^3.3.0",
-    "@astrojs/tailwind": "^5.1.0",
-    "@nanostores/preact": "^0.5.1",
-    "astro": "^4.11.0",
-    "astro-compress": "^2.2.28",
-    "codegpt-nextjs": "file:c:/Users/santi/.vscode/extensions/danielsanmedium.dscodegpt-3.4.0/standalone",
-    "flowbite": "^2.4.1",
-    "nanostores": "^0.10.3",
-    "preact": "^10.22.0",
-    "tailwindcss": "^3.4.4",
+    "@astrojs/check": "^0.9.4",
+    "@astrojs/preact": "^4.0.3",
+    "@astrojs/tailwind": "^5.1.5",
+    "@astrojs/vercel": "^8.0.4",
+    "@nanostores/preact": "^0.5.2",
+    "@supabase/supabase-js": "^2.48.1",
+    "astro": "^5.1.10",
+    "astro-compress": "^2.3.6",
+    "bibliovet": "file:",
+    "flowbite": "^3.0.0",
+    "nanostores": "^0.11.3",
+    "preact": "^10.25.4",
     "tailwindcss-animated": "^1.1.2",
-    "typescript": "^5.5.2"
+    "typescript": "^5.7.3"
   }
 }

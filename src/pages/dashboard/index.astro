@@ -1,0 +1,364 @@
+---
+import Layout from "@layouts/Layout.astro";
+import { supabase } from "@lib/supabase";
+import SocialHeader from "@components/organism/SocialHeader.astro";
+import ErrorModal from "@components/organism/modals/ErrorModal.astro";
+import ContributionCard from "@components/molecule/ContributionCard.astro";
+import UserArticles from "@components/organism/profile/UserArticles.astro";
+import UserDetails from "@components/organism/profile/UserDetails.astro";
+
+const accessToken = Astro.cookies.get("bv-access-token");
+const refreshToken = Astro.cookies.get("bv-refresh-token");
+
+if (!accessToken || !refreshToken) {
+  return Astro.redirect("/auth/signin");
+}
+
+let session;
+try {
+  session = await supabase.auth.setSession({
+    refresh_token: refreshToken.value,
+    access_token: accessToken.value,
+  });
+  if (session.error) {
+    Astro.cookies.delete("bv-access-token", {
+      path: "/",
+    });
+    Astro.cookies.delete("bv-refresh-token", {
+      path: "/",
+    });
+    return Astro.redirect("/auth/signin");
+  }
+} catch (error) {
+  Astro.cookies.delete("bv-access-token", {
+    path: "/",
+  });
+  Astro.cookies.delete("bv-refresh-token", {
+    path: "/",
+  });
+  return Astro.redirect("/auth/signin");
+}
+
+//Obtener la informacion del usuario de la base de datos
+const url = import.meta.env.DEV
+  ? "http://localhost:4321"
+  : "https://qpets.vercel.app";
+
+const response = await fetch(url + "/api/profile", {
+  method: "GET",
+  headers: { id: session.data.user!.id, typeOfId: "uuid" },
+});
+
+const { data, image, contributions, status } = await response.json();
+let welcome = false;
+if (data[0].nickname == null) {
+  welcome = true;
+}
+---
+
+<Layout title="dashboard">
+  <SocialHeader />
+
+  {
+    welcome ? (
+      <section class="flex flex-col items-center justify-center mt-20 mb-20">
+        <h1 class="text-4xl font-bold text-white">Bienvenido a Bibliovet</h1>
+        <p class="text-white mt-5">
+          Por favor completa tu perfil para poder disfrutar de todas las
+          funcionalidades de la plataforma
+        </p>
+        <form class="max-w-sm mx-auto mt-10">
+          <div class="flex gap-8">
+            <div class="mb-5">
+              <label
+                for="name"
+                class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+              >
+                Nombre
+              </label>
+              <input
+                type="text"
+                id="name"
+                name="name"
+                class="shadow-xs bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 dark:shadow-xs-light"
+                required
+              />
+            </div>
+            <div class="mb-5">
+              <label
+                for="firstname"
+                class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+              >
+                Apellido
+              </label>
+              <input
+                type="text"
+                id="firstname"
+                name="firstname"
+                class="shadow-xs bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 dark:shadow-xs-light"
+                required
+              />
+            </div>
+          </div>
+
+          <div class="flex flex-col mb-5">
+            <label
+              for="nickname"
+              class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+            >
+              Elije tu apodo, o nombre de usuario
+            </label>
+            <div class="relative w-full">
+              <input
+                type="search"
+                id="nickname"
+                name="nickname"
+                class="block p-2.5 w-full z-20 text-sm rounded-s-gray-100 rounded-s-2 border"
+                required
+              />
+              <button
+                id="check-nickname"
+                type="button"
+                class="absolute top-0 end-0 p-2.5 h-full text-sm font-medium text-white bg-blue-700 rounded-e-lg border border-blue-700 hover:bg-blue-800 dark:bg-blue-600 dark:hover:bg-blue-700"
+              >
+                check
+              </button>
+            </div>
+            <p id="check-alert" class="mt-2">
+              <span class="font-medium" />
+            </p>
+          </div>
+
+          <div class="mb-5">
+            <label
+              for="position"
+              class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+            >
+              A que te dedicas? (Se verificará)
+            </label>
+            <select
+              id="position"
+              name="position"
+              class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+            >
+              <option>Estudiante</option>
+              <option>Profesor</option>
+              <option>Profesional</option>
+            </select>
+          </div>
+
+          <div id="semester-div" class="mb-5">
+            <label
+              for="semester"
+              class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+            >
+              Semestre
+            </label>
+            <input
+              type="number"
+              id="semester"
+              name="semester"
+              min="0"
+              value="0"
+              class="shadow-xs bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 dark:shadow-xs-light"
+              required
+            />
+          </div>
+
+          <div class="mb-5">
+            <label
+              for="university"
+              class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+            >
+              Universidad
+            </label>
+            <select
+              id="university"
+              name="university"
+              class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+              required
+            >
+              <option>Universidad Tecnológica de Pereira</option>
+              <option>Visión de las Américas</option>
+              <option>Unisarc</option>
+            </select>
+          </div>
+
+          <div>
+            <label
+              class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+              for="user_avatar"
+            >
+              Foto de perfil
+            </label>
+            <input
+              class="block w-full text-sm text-gray-900 border border-gray-300 rounded-lg cursor-pointer bg-gray-50 dark:text-gray-400 focus:outline-none dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400"
+              aria-describedby="user_avatar_help"
+              id="user_avatar"
+              name="user_avatar"
+              type="file"
+              required
+            />
+            <div
+              class="mt-1 text-sm text-gray-500 dark:text-gray-300"
+              id="user_avatar_help"
+            >
+              {" "}
+              Peso Maximo 30KB y formatos: jpeg/png/webp
+            </div>
+            <div
+              class="mt-1 text-xs text-gray-400 dark:text-gray-300"
+              id="user_avatar_help"
+            >
+              {" "}
+              Pagina para reducir peso de tu imagen -
+              <a href="https://squoosh.app/" class="underline text-blue-700">
+                squoosh.app/
+              </a>{" "}
+            </div>
+          </div>
+
+          <button
+            id="submit"
+            type="button"
+            class="bg-lime-500 text-white px-5 py-2 mt-5 rounded-lg"
+          >
+            Completar perfil
+          </button>
+        </form>
+        <div
+          id="small-modal"
+          tabindex="-1"
+          class="fixed top-0 left-0 right-0 z-50 hidden w-full p-4 overflow-x-hidden overflow-y-auto md:inset-0 h-[calc(100%-1rem)] max-h-full"
+        >
+          <ErrorModal />
+        </div>
+      </section>
+    ) : (
+      <section class="flex flex-wrap h-full justify-center mx-auto my-10 lg:my-20 gap-10 px-7">
+        <UserDetails image={image} data={data[0]} />
+        <UserArticles contributions={contributions} type={'owner'} />
+      </section>
+    )
+  }
+</Layout>
+
+<style scoped lang="scss">
+  #semester-div {
+    &.student {
+      display: block;
+    }
+    &.notStudent {
+      display: none;
+    }
+  }
+
+  #nickname {
+    @apply text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:border-blue-500;
+    &.success {
+      @apply bg-green-100 border-green-500 text-green-900 dark:text-green-400 dark:placeholder-green-500 text-sm rounded-lg focus:ring-green-500 focus:border-green-500 dark:bg-gray-700 dark:border-green-500;
+    }
+    &.error {
+      @apply bg-red-100 border-red-500 text-red-900 dark:text-red-400 dark:placeholder-red-500 text-sm rounded-lg focus:ring-red-500 focus:border-red-500 dark:bg-gray-700 dark:border-red-500;
+    }
+  }
+
+  #check-alert {
+    @apply text-sm;
+    &.success {
+      @apply text-green-600 dark:text-green-500;
+    }
+    &.error {
+      @apply text-red-600 dark:text-red-500;
+    }
+  }
+</style>
+
+<script>
+  const position = document.getElementById("position");
+  const semester = document.getElementById("semester-div");
+  position?.addEventListener("change", (e: any) => {
+    if (e.target.value === "Estudiante") {
+      semester?.classList.toggle("student");
+      semester?.classList.toggle("notStudent");
+    } else {
+      semester?.classList.add("notStudent");
+    }
+  });
+
+  const checkNickname = document.getElementById("check-nickname"); // Button
+  const url = import.meta.env.DEV
+    ? "http://localhost:4321"
+    : "https://qpets.vercel.app";
+  checkNickname?.addEventListener("click", async () => {
+    const nickname = document.getElementById("nickname") as HTMLInputElement; // Input
+    const checkAlert = document.getElementById(
+      "check-alert"
+    ) as HTMLInputElement;
+    if (!nickname.value) {
+      alert("El campo nickname no puede estar vacio");
+      return;
+    }
+    const response = await fetch(`${url}/api/check-nickname`, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({ nickname: nickname.value }),
+    });
+    const { status } = await response.json();
+
+    if (status) {
+      nickname.classList.add("error");
+      nickname.classList.remove("success");
+
+      checkAlert.textContent = "No es valido 😓 elige uno diferente";
+      checkAlert.classList.add("error");
+      checkAlert.classList.remove("success");
+    } else {
+      nickname.classList.add("success");
+      nickname.classList.remove("error");
+
+      checkAlert.textContent = "Es valido!";
+      checkAlert.classList.add("success");
+      checkAlert.classList.remove("error");
+    }
+  });
+
+  const form = document.querySelector("#submit");
+  form?.addEventListener("click", async (e) => {
+    const name = document.getElementById("name") as HTMLInputElement;
+    const firstname = document.getElementById("firstname") as HTMLInputElement;
+    const nickname = document.getElementById("nickname") as HTMLInputElement;
+    const position = document.getElementById("position") as HTMLSelectElement;
+    const semester = document.getElementById("semester") as HTMLInputElement;
+    const university = document.getElementById(
+      "university"
+    ) as HTMLSelectElement;
+    const user_avatar = document.getElementById(
+      "user_avatar"
+    ) as HTMLInputElement;
+
+    const formData = new FormData();
+    formData.append("name", name.value);
+    formData.append("firstname", firstname.value);
+    formData.append("nickname", nickname.value);
+    formData.append("position", position.value);
+    formData.append("semester", semester.value);
+    formData.append("university", university.value);
+    formData.append("user_avatar", user_avatar.files![0]);
+
+    const response = await fetch(`${url}/api/update-all-user`, {
+      method: "POST",
+      body: formData,
+    });
+
+    const errorModal = document.querySelector("#small-modal");
+    const { status } = await response.json();
+    if (status) {
+      location.reload();
+    } else {
+      errorModal?.classList.toggle("hidden");
+    }
+  });
+</script>
