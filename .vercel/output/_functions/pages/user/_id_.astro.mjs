@@ -1,10 +1,10 @@
 /* empty css                                       */
-import { c as createComponent, r as renderTemplate, g as renderComponent, f as createAstro, m as maybeRenderHead } from '../../chunks/astro/server_hdbVl3pW.mjs';
+import { c as createComponent, a as createAstro, r as renderTemplate, g as renderComponent, m as maybeRenderHead } from '../../chunks/astro/server_B7PLLljb.mjs';
 import 'kleur/colors';
-import { $ as $$Layout } from '../../chunks/Layout_C1k_9Jh4.mjs';
+import { $ as $$Layout } from '../../chunks/Layout_Cu1PB-w6.mjs';
 import { g as getSession } from '../../chunks/helpers_C4tQHmo0.mjs';
 import { s as supabase } from '../../chunks/supabase_DGtTifTM.mjs';
-import { $ as $$SocialHeader, a as $$UserDetails, b as $$UserArticles } from '../../chunks/UserDetails_lQ6EQG2T.mjs';
+import { $ as $$SocialHeader, a as $$UserDetails, b as $$UserArticles } from '../../chunks/UserDetails_q84UdFlG.mjs';
 export { renderers } from '../../renderers.mjs';
 
 const $$Astro = createAstro();
@@ -30,7 +30,7 @@ const $$id = createComponent(async ($$result, $$props, $$slots) => {
     return Astro2.redirect(url);
   }
   return renderTemplate`${renderComponent($$result, "Layout", $$Layout, { "title": "dashboard" }, { "default": ($$result2) => renderTemplate` ${renderComponent($$result2, "SocialHeader", $$SocialHeader, {})} ${maybeRenderHead()}<section class="flex flex-wrap h-full justify-center mx-auto my-10 lg:my-20 gap-10 px-7"> ${renderComponent($$result2, "UserDetails", $$UserDetails, { "image": image, "data": data[0], "type": "visitor" })} ${renderComponent($$result2, "UserArticles", $$UserArticles, { "contributions": contributions, "type": "visitor" })} </section> ` })}`;
-}, "E:/programacion/Sanss/BiblioVet/bibliovet/src/pages/user/[id].astro", undefined);
+}, "E:/programacion/Sanss/BiblioVet/bibliovet/src/pages/user/[id].astro", void 0);
 const $$file = "E:/programacion/Sanss/BiblioVet/bibliovet/src/pages/user/[id].astro";
 const $$url = "/user/[id]";
 

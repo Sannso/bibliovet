@@ -11,18 +11,18 @@
   },
   "dependencies": {
     "@astrojs/check": "^0.9.4",
-    "@astrojs/preact": "^4.0.3",
-    "@astrojs/tailwind": "^5.1.5",
+    "@astrojs/preact": "^4.0.4",
+    "@astrojs/tailwind": "^6.0.0",
     "@astrojs/vercel": "^8.0.4",
     "@nanostores/preact": "^0.5.2",
     "@supabase/supabase-js": "^2.48.1",
-    "astro": "^5.1.10",
+    "astro": "^5.2.6",
     "astro-compress": "^2.3.6",
     "bibliovet": "file:",
-    "flowbite": "^3.0.0",
+    "flowbite": "^3.1.2",
     "nanostores": "^0.11.3",
     "preact": "^10.25.4",
-    "tailwindcss-animated": "^1.1.2",
+    "tailwindcss-animated": "^2.0.0",
     "typescript": "^5.7.3"
   }
 }

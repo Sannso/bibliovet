@@ -1,9 +1,9 @@
 /* empty css                                    */
-import { c as createComponent, r as renderTemplate, m as maybeRenderHead, e as renderScript, g as renderComponent, f as createAstro } from '../chunks/astro/server_hdbVl3pW.mjs';
+import { c as createComponent, r as renderTemplate, m as maybeRenderHead, f as renderScript, a as createAstro, g as renderComponent } from '../chunks/astro/server_B7PLLljb.mjs';
 import 'kleur/colors';
-import { $ as $$Layout } from '../chunks/Layout_C1k_9Jh4.mjs';
+import { $ as $$Layout } from '../chunks/Layout_Cu1PB-w6.mjs';
 import { s as supabase } from '../chunks/supabase_DGtTifTM.mjs';
-import { $ as $$SocialHeader, a as $$UserDetails, b as $$UserArticles } from '../chunks/UserDetails_lQ6EQG2T.mjs';
+import { $ as $$SocialHeader, a as $$UserDetails, b as $$UserArticles } from '../chunks/UserDetails_q84UdFlG.mjs';
 import 'clsx';
 /* empty css                                 */
 export { renderers } from '../renderers.mjs';
@@ -16,7 +16,7 @@ Recomendación: Sube una imagen con un tamaño menor a 30KB. Puedes usar
         el link recomendado para reducir el tamaño de tu imagen y se
         recomenienda transformarla a formato .webp
 </p> </div> <!-- Modal footer --> <div class="flex items-center p-4 md:p-5 border-t border-gray-200 rounded-b dark:border-gray-600"> <button id="errorModalButton" type="button" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Aceptar</button> </div> </div> </div> ${renderScript($$result, "E:/programacion/Sanss/BiblioVet/bibliovet/src/components/organism/modals/ErrorModal.astro?astro&type=script&index=0&lang.ts")}`;
-}, "E:/programacion/Sanss/BiblioVet/bibliovet/src/components/organism/modals/ErrorModal.astro", undefined);
+}, "E:/programacion/Sanss/BiblioVet/bibliovet/src/components/organism/modals/ErrorModal.astro", void 0);
 
 const $$Astro = createAstro();
 const $$Index = createComponent(async ($$result, $$props, $$slots) => {
@@ -89,7 +89,7 @@ squoosh.app/
 </a>${" "} </div> </div> <button id="submit" type="button" class="bg-lime-500 text-white px-5 py-2 mt-5 rounded-lg" data-astro-cid-y55gmoyq>
 Completar perfil
 </button> </form> <div id="small-modal" tabindex="-1" class="fixed top-0 left-0 right-0 z-50 hidden w-full p-4 overflow-x-hidden overflow-y-auto md:inset-0 h-[calc(100%-1rem)] max-h-full" data-astro-cid-y55gmoyq> ${renderComponent($$result2, "ErrorModal", $$ErrorModal, { "data-astro-cid-y55gmoyq": true })} </div> </section>` : renderTemplate`<section class="flex flex-wrap h-full justify-center mx-auto my-10 lg:my-20 gap-10 px-7" data-astro-cid-y55gmoyq> ${renderComponent($$result2, "UserDetails", $$UserDetails, { "image": image, "data": data[0], "data-astro-cid-y55gmoyq": true })} ${renderComponent($$result2, "UserArticles", $$UserArticles, { "contributions": contributions, "type": "owner", "data-astro-cid-y55gmoyq": true })} </section>`}` })}  ${renderScript($$result, "E:/programacion/Sanss/BiblioVet/bibliovet/src/pages/dashboard/index.astro?astro&type=script&index=0&lang.ts")}`;
-}, "E:/programacion/Sanss/BiblioVet/bibliovet/src/pages/dashboard/index.astro", undefined);
+}, "E:/programacion/Sanss/BiblioVet/bibliovet/src/pages/dashboard/index.astro", void 0);
 const $$file = "E:/programacion/Sanss/BiblioVet/bibliovet/src/pages/dashboard/index.astro";
 const $$url = "/dashboard";
 

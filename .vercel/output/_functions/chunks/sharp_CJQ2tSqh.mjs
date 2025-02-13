@@ -1,5 +1,5 @@
-import { A as AstroError, M as MissingSharp } from './astro/server_hdbVl3pW.mjs';
-import { b as baseService, p as parseQuality } from './generic_e0SOXKfj.mjs';
+import { A as AstroError, M as MissingSharp } from './astro/server_B7PLLljb.mjs';
+import { b as baseService, p as parseQuality } from './generic_CbEUQ-uc.mjs';
 
 let sharp;
 const qualityTable = {
@@ -65,13 +65,13 @@ const sharpService = {
       });
     }
     if (transform.format) {
-      let quality = undefined;
+      let quality = void 0;
       if (transform.quality) {
         const parsedQuality = parseQuality(transform.quality);
         if (typeof parsedQuality === "number") {
           quality = parsedQuality;
         } else {
-          quality = transform.quality in qualityTable ? qualityTable[transform.quality] : undefined;
+          quality = transform.quality in qualityTable ? qualityTable[transform.quality] : void 0;
         }
       }
       result.toFormat(transform.format, { quality });

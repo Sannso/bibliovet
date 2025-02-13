@@ -1,6 +1,6 @@
-import { c as createComponent, r as renderTemplate, e as renderScript, m as maybeRenderHead, g as renderComponent, f as createAstro } from './astro/server_hdbVl3pW.mjs';
+import { c as createComponent, a as createAstro, r as renderTemplate, f as renderScript, m as maybeRenderHead, g as renderComponent } from './astro/server_B7PLLljb.mjs';
 import 'kleur/colors';
-import { h as header, p as parasitologia } from './es_Ci7OVAvY.mjs';
+import { h as header, p as parasitologia } from './es_BWUqs16E.mjs';
 import { jsxs, jsx, Fragment } from 'preact/jsx-runtime';
 /* empty css                            */
 import 'clsx';
@@ -223,11 +223,11 @@ const $$Header = createComponent(($$result, $$props, $$slots) => {
   Astro2.self = $$Header;
   const { category } = Astro2.props;
   return renderTemplate`${renderScript($$result, "E:/programacion/Sanss/BiblioVet/bibliovet/src/components/organism/Header.astro?astro&type=script&index=0&lang.ts")} ${maybeRenderHead()}<header class="header flex items-center justify-between sticky h-12 md:h-14 px-5 top-0 shadow-lg w-full text-white z-50" data-astro-cid-dvaxi3yn> ${renderComponent($$result, "Drawer", Drawer, { "category": category, "client:load": true, "client:component-hydration": "load", "client:component-path": "@components/organism/drawer", "client:component-export": "Drawer", "data-astro-cid-dvaxi3yn": true })} <h1 class="font-bold text-lg absolute left-2/4 -translate-x-2/4" data-astro-cid-dvaxi3yn> ${header.title} </h1> <a href="/" class="flex items-center justify-center h-7 w-7 rounded-full bg-neutral-800 text-neutral-300 transition-colors hover:text-neutral-50 hover:bg-neutral-600" data-astro-cid-dvaxi3yn> ${renderComponent($$result, "CloseIcon", CloseIcon, { "data-astro-cid-dvaxi3yn": true })} </a> </header> `;
-}, "E:/programacion/Sanss/BiblioVet/bibliovet/src/components/organism/Header.astro", undefined);
+}, "E:/programacion/Sanss/BiblioVet/bibliovet/src/components/organism/Header.astro", void 0);
 
 const $$Footer = createComponent(($$result, $$props, $$slots) => {
   return renderTemplate`${maybeRenderHead()}<footer class="flex flex-col items-center pb-4 pt-32 mt-auto text-zinc-700 font-semibold text-xs"> <p>Desarrollado por Sanss</p> <p class="text-center">Escrito y revisado por Gabriela Villamil - Estudiante de Medicina Veterinaria y Zootecnia</p> </footer>`;
-}, "E:/programacion/Sanss/BiblioVet/bibliovet/src/components/organism/Footer.astro", undefined);
+}, "E:/programacion/Sanss/BiblioVet/bibliovet/src/components/organism/Footer.astro", void 0);
 
 function Normal({
   text

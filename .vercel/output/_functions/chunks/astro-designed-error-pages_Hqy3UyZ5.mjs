@@ -1,4 +1,4 @@
-import { N as NOOP_MIDDLEWARE_HEADER, D as DEFAULT_404_COMPONENT } from './astro/server_hdbVl3pW.mjs';
+import { N as NOOP_MIDDLEWARE_HEADER, D as DEFAULT_404_COMPONENT } from './astro/server_B7PLLljb.mjs';
 import { parse } from 'devalue';
 import { escape } from 'html-escaper';
 
@@ -9,9 +9,7 @@ const NOOP_MIDDLEWARE_FN = async (_ctx, next) => {
 };
 
 const ACTION_QUERY_PARAMS = {
-  actionName: "_action",
-  actionPayload: "_astroActionPayload"
-};
+  actionName: "_action"};
 
 const __vite_import_meta_env__ = {"ASSETS_PREFIX": undefined, "BASE_URL": "/", "DEV": false, "MODE": "production", "PROD": true, "SITE": undefined, "SSR": true};
 const codeToStatusMap = {
@@ -106,7 +104,7 @@ function deserializeActionResult(res) {
       json = JSON.parse(res.body);
     } catch {
       return {
-        data: undefined,
+        data: void 0,
         error: new ActionError({
           message: res.body,
           code: "INTERNAL_SERVER_ERROR"
@@ -114,24 +112,24 @@ function deserializeActionResult(res) {
       };
     }
     if (Object.assign(__vite_import_meta_env__, { OS: process.env.OS })?.PROD) {
-      return { error: ActionError.fromJson(json), data: undefined };
+      return { error: ActionError.fromJson(json), data: void 0 };
     } else {
       const error = ActionError.fromJson(json);
       error.stack = actionResultErrorStack.get();
       return {
         error,
-        data: undefined
+        data: void 0
       };
     }
   }
   if (res.type === "empty") {
-    return { data: undefined, error: undefined };
+    return { data: void 0, error: void 0 };
   }
   return {
     data: parse(res.body, {
       URL: (href) => new URL(href)
     }),
-    error: undefined
+    error: void 0
   };
 }
 const actionResultErrorStack = /* @__PURE__ */ function actionResultErrorStackFn() {
