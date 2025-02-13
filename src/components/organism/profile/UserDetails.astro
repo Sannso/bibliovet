@@ -7,7 +7,7 @@ const { image, data, type = "owner" } = Astro.props;
 let buttonState = "follow";
 let buttonContent = "Seguir";
 const sessionData = await getSession(Astro.cookies);
-const { data: followData, error } = await supabase
+const { data: followData} = await supabase
   .from("followers")
   .select()
   .match({

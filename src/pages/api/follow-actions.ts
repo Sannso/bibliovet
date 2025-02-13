@@ -22,14 +22,14 @@ export const POST: APIRoute = async ({ request, cookies }) => {
 
   const session = await getSession(cookies);
   if (follow_state == "follow") {
-    const { data, error } = await supabase
+    await supabase
       .from("followers")
       .insert({
         user_uuid: session.session.data.user!.id,
         follower_uuid: user![0].uuid,
       });
   } else {
-    const { data, error } = await supabase
+    await supabase
       .from("followers")
       .delete()
       .eq("user_uuid", session.session.data.user!.id);

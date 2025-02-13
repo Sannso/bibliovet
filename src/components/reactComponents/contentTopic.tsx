@@ -6,7 +6,6 @@ import { Normal } from "./contentTemplates/normal";
 import { WithSubtitle } from "./contentTemplates/withSubtitle";
 import { List } from "./contentTemplates/list";
 import { Family } from "./contentTemplates/family";
-import { UpLeftArrowIcon } from "@components/icons/pointerIcons";
 import { SimpleTitle } from "./contentTemplates/simpleTitle";
 
 export function ContentTopic() {

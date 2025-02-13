@@ -45,7 +45,7 @@ export const POST: APIRoute = async ({ request, cookies }) => {
 
   console.log(responsePicStorage);
 
-  const { data: dataUpdate, error: dataError } = await supabase
+  const {error: dataError } = await supabase
     .from("user_related")
     .update({
       name: name,
