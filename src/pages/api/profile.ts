@@ -31,7 +31,7 @@ export const GET: APIRoute = async ({ request }) => {
     contributions: <any>[],
   };
 
-  console.log("Se obtuvo la data", data);
+  console.log("Se obtuvo la data", data![0]);
 
   // Las otras llamadas deben tener el mismo formato de id (uuid)
   if (data.length === 0) {
