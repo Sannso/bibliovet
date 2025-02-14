@@ -10,4 +10,5 @@ export default defineConfig({
   integrations: [tailwind(), preact({ compat: true })],
   output: 'server',
   adapter: vercel(),
+  prerender: { enabled: false }
 });
