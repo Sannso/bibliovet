@@ -9,7 +9,7 @@ const accessToken = cookies.get("bv-access-token");
 const refreshToken = cookies.get("bv-refresh-token");
 
 if (accessToken && refreshToken) {
-  return redirect("/dashboard");
+  return  Astro.redirect("/dashboard");
 }
 ---
 
