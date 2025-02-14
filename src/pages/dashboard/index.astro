@@ -6,8 +6,6 @@ import ErrorModal from "@components/organism/modals/ErrorModal.astro";
 import UserArticles from "@components/organism/profile/UserArticles.astro";
 import UserDetails from "@components/organism/profile/UserDetails.astro";
 
-export const prerender = false;
-
 const accessToken = Astro.cookies.get("bv-access-token");
 const refreshToken = Astro.cookies.get("bv-refresh-token");
 
