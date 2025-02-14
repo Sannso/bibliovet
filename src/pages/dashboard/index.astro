@@ -52,7 +52,8 @@ const response = await fetch(url + "/api/profile", {
 
 const { data, image, contributions} = await response.json();
 let welcome = false;
-if (data[0].nickname == null) {
+console.log(data)
+if (data[0]?.nickname == null) {
   welcome = true;
 }
 ---
