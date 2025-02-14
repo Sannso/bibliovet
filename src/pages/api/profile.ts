@@ -7,15 +7,8 @@ export const GET: APIRoute = async ({ request, cookies }) => {
   const typeofid = request.headers.get("typeofid")!;
   const token = request.headers.get("token")!;
 
-  // En el "front" ya me asegure que haya una session, asi que en el back no es necesario, solo la pido
-  const { data:prueba, error:errorprueba } = await supabaseAuth(token).from("user_related")
-  .select()
-  .eq(typeofid, dataRequest);
-
- console.log("info:? ", prueba, errorprueba )
-
   // BD fetch
-  const { data, error } = await supabase
+  const { data, error } = await supabaseAuth(token)
     .from("user_related")
     .select()
     .eq(typeofid, dataRequest);
@@ -48,7 +41,7 @@ export const GET: APIRoute = async ({ request, cookies }) => {
 
   const id = typeofid === "uuid" ? dataRequest : data[0].uuid;
 
-  const { data: dataImage, error: errorImage } = await supabase.storage
+  const { data: dataImage, error: errorImage } = await supabaseAuth(token).storage
     .from("profile_pic")
     .createSignedUrl(data[0].user_avatar.split("/").pop(), 60);
 
@@ -58,7 +51,7 @@ export const GET: APIRoute = async ({ request, cookies }) => {
 
   console.log("Se obtuvo la imagen", dataImage);
 
-  const { data: contributions, error: errorContributions } = await supabase
+  const { data: contributions, error: errorContributions } = await supabaseAuth(token)
     .from("user_contributions")
     .select()
     .eq("user", id);
