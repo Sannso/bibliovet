@@ -5,7 +5,6 @@ export const GET: APIRoute = async ({ request }) => {
   const dataRequest = request.headers.get("id")!;
   const typeofid = request.headers.get("typeofid")!;
 
-  console.log("info recibida en el back", dataRequest, typeofid);
 
   // BD fetch
   const { data, error } = await supabase
@@ -32,6 +31,8 @@ export const GET: APIRoute = async ({ request }) => {
     contributions: <any>[],
   };
 
+  console.log("Se obtuvo la data", data);
+
   // Las otras llamadas deben tener el mismo formato de id (uuid)
   if (data.length === 0) {
     return new Response(JSON.stringify(info), { status: 500 });
@@ -47,6 +48,8 @@ export const GET: APIRoute = async ({ request }) => {
     return new Response(JSON.stringify(info), { status: 500 });
   }
 
+  console.log("Se obtuvo la imagen", dataImage);
+
   const { data: contributions, error: errorContributions } = await supabase
     .from("user_contributions")
     .select()
@@ -55,6 +58,8 @@ export const GET: APIRoute = async ({ request }) => {
   if (errorContributions) {
     return new Response(JSON.stringify(info), { status: 500 });
   }
+
+  console.log("Se obtuvo las contribuciones", contributions);
 
   info.image = dataImage.signedUrl;
   info.status = true;
