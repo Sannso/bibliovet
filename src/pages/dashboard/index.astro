@@ -47,7 +47,7 @@ const url = import.meta.env.DEV
 
 const response = await fetch(url + "/api/profile", {
   method: "GET",
-  headers: { id: session.data.user!.id, typeOfId: "uuid" },
+  headers: { id: session.data.user!.id, typeOfId: "uuid", token: accessToken.value },
 });
 
 const { data, image, contributions} = await response.json();

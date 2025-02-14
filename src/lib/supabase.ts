@@ -6,7 +6,7 @@ export const supabase = createClient(
 );
 
 export function supabaseAuth(token: string) {
-  createClient(
+  return createClient(
     import.meta.env.SUPABASE_URL,
     import.meta.env.SUPABASE_ANON_KEY,
     {

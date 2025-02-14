@@ -1,16 +1,18 @@
 import type { APIRoute } from "astro";
-import { supabase } from "@/lib/supabase";
+import { supabase, supabaseAuth } from "@/lib/supabase";
 import { getSession } from "@lib/helpers";
 
 export const GET: APIRoute = async ({ request, cookies }) => {
   const dataRequest = request.headers.get("id")!;
   const typeofid = request.headers.get("typeofid")!;
+  const token = request.headers.get("token")!;
 
   // En el "front" ya me asegure que haya una session, asi que en el back no es necesario, solo la pido
-  const session:any = await getSession(cookies);
+  const { data:prueba, error:errorprueba } = await supabaseAuth(token).from("user_related")
+  .select()
+  .eq(typeofid, dataRequest);
 
-  console.log("Se obtuvo la cookie", cookies.get("bv-access-token"));
-
+ console.log("info:? ", prueba, errorprueba )
 
   // BD fetch
   const { data, error } = await supabase
