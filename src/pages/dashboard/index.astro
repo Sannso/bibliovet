@@ -5,54 +5,26 @@ import SocialHeader from "@components/organism/SocialHeader.astro";
 import ErrorModal from "@components/organism/modals/ErrorModal.astro";
 import UserArticles from "@components/organism/profile/UserArticles.astro";
 import UserDetails from "@components/organism/profile/UserDetails.astro";
+import { getSession } from "@lib/helpers";
+import { getUrl } from "@lib/helpers";
 
 export const prerender = false;
 
-const accessToken = Astro.cookies.get("bv-access-token");
-const refreshToken = Astro.cookies.get("bv-refresh-token");
-
-if (!accessToken || !refreshToken) {
-  return Astro.redirect("/auth/signin");
-}
-
-let session;
-try {
-  session = await supabase.auth.setSession({
-    refresh_token: refreshToken.value,
-    access_token: accessToken.value,
-  });
-  if (session.error) {
-    Astro.cookies.delete("bv-access-token", {
-      path: "/",
-    });
-    Astro.cookies.delete("bv-refresh-token", {
-      path: "/",
-    });
-    return Astro.redirect("/auth/signin");
-  }
-} catch (error) {
-  Astro.cookies.delete("bv-access-token", {
-    path: "/",
-  });
-  Astro.cookies.delete("bv-refresh-token", {
-    path: "/",
-  });
+const {session, status, token} = await getSession(Astro.cookies)
+if (!status) {
   return Astro.redirect("/auth/signin");
 }
 
 //Obtener la informacion del usuario de la base de datos
-const url = import.meta.env.DEV
-  ? "http://localhost:4321"
-  : "https://bibliovet.vercel.app";
-
+const url = getUrl()
 const response = await fetch(url + "/api/profile", {
   method: "GET",
-  headers: { id: session.data.user!.id, typeOfId: "uuid", token: accessToken.value },
+  headers: { id: session.data.user!.id, typeOfId: "uuid", token: token },
 });
 
 const { data, image, contributions} = await response.json();
 let welcome = false;
-console.log("no hay data: ", data)
+
 if (data[0]?.nickname == null) {
   welcome = true;
 }

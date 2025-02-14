@@ -32,8 +32,6 @@ export const GET: APIRoute = async ({ request, cookies }) => {
     contributions: <any>[],
   };
 
-  console.log("Se obtuvo la data", data![0]);
-
   // Las otras llamadas deben tener el mismo formato de id (uuid)
   if (data.length === 0) {
     return new Response(JSON.stringify(info), { status: 500 });
@@ -49,8 +47,6 @@ export const GET: APIRoute = async ({ request, cookies }) => {
     return new Response(JSON.stringify(info), { status: 500 });
   }
 
-  console.log("Se obtuvo la imagen", dataImage);
-
   const { data: contributions, error: errorContributions } = await supabaseAuth(token)
     .from("user_contributions")
     .select()
@@ -59,8 +55,6 @@ export const GET: APIRoute = async ({ request, cookies }) => {
   if (errorContributions) {
     return new Response(JSON.stringify(info), { status: 500 });
   }
-
-  console.log("Se obtuvo las contribuciones", contributions);
 
   info.image = dataImage.signedUrl;
   info.status = true;

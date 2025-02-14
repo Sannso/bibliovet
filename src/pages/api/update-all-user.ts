@@ -1,5 +1,5 @@
 import type { APIRoute } from "astro";
-import { supabase } from "@/lib/supabase";
+import { supabase, supabaseAuth } from "@/lib/supabase";
 
 export const POST: APIRoute = async ({ request, cookies }) => {
   const accessToken = cookies.get("bv-access-token");
@@ -24,7 +24,7 @@ export const POST: APIRoute = async ({ request, cookies }) => {
 
   // Subir el archivo con metadatos que incluyan el user_id
 
-  const { data: responsePicStorage, error } = await supabase.storage
+  const { data: responsePicStorage, error } = await supabaseAuth(accessToken!.value).storage
     .from("profile_pic")
     .upload(filePath, user_avatar, {
       cacheControl: "1800",
@@ -45,7 +45,7 @@ export const POST: APIRoute = async ({ request, cookies }) => {
 
   console.log(responsePicStorage);
 
-  const {error: dataError } = await supabase
+  const {error: dataError } = await supabaseAuth(accessToken!.value)
     .from("user_related")
     .update({
       name: name,

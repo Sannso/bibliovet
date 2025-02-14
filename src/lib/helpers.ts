@@ -4,7 +4,7 @@ export async function getSession(cookies: any) {
   const accessToken = cookies.get("bv-access-token");
   const refreshToken = cookies.get("bv-refresh-token");
 
-  const data = { session: <any>{}, status: true };
+  const data = { session: <any>{}, status: true, token: accessToken.value};
 
   let session;
   try {

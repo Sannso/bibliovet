@@ -1,11 +1,12 @@
 import type { APIRoute } from "astro";
-import { supabase } from "@/lib/supabase";
+import { supabaseAuth } from "@/lib/supabase";
 
-export const POST: APIRoute = async ({ request }) => {
+export const POST: APIRoute = async ({ request, cookies }) => {
   const { nickname } = await request.json();
-    
+  const token = cookies.get("bv-access-token")!.value;  
+
   // BD fetch
-  const { data, error } = await supabase
+  const { data, error } = await supabaseAuth(token)
     .from("user_related")
     .select()
     .eq("nickname", nickname);
