@@ -7,7 +7,7 @@ const { title } = Astro.props;
 ---
 
 <!doctype html>
-<html lang="en">
+<html lang="es">
   <head>
     <meta charset="UTF-8" />
     <meta name="description" content="Astro description" />
@@ -15,7 +15,6 @@ const { title } = Astro.props;
     <meta name="theme-color" content="#009578" />
     <link rel="icon" type="image/webp" href="/images/vaca192.webp" />
     <link rel="apple-touch-icon" href="/images/vaca192.webp" />
-    <link rel="manifest" href="../manifest.json" />
     <link
       href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.css"
       rel="stylesheet"
@@ -26,7 +25,6 @@ const { title } = Astro.props;
   </head>
   <body class="flex flex-col min-h-screen">
     <slot />
-    <script src="../index.ts"></script>
     <script
       src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.js"
     ></script>
