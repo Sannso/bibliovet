@@ -5,6 +5,8 @@ export const GET: APIRoute = async ({ request }) => {
   const dataRequest = request.headers.get("id")!;
   const typeofid = request.headers.get("typeofid")!;
 
+  console.log("info recibida en el back", dataRequest, typeofid);
+
   // BD fetch
   const { data, error } = await supabase
     .from("user_related")
