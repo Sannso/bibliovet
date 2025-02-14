@@ -1,0 +1,95 @@
+{
+	"version": 3,
+	"routes": [
+		{
+			"src": "^/_astro/(.*)$",
+			"headers": {
+				"cache-control": "public, max-age=31536000, immutable"
+			},
+			"continue": true
+		},
+		{
+			"handle": "filesystem"
+		},
+		{
+			"src": "^\\/_server-islands\\/([^/]+?)\\/?$",
+			"dest": "_render"
+		},
+		{
+			"src": "^\\/_image\\/?$",
+			"dest": "_render"
+		},
+		{
+			"src": "^\\/api\\/auth\\/register\\/?$",
+			"dest": "_render"
+		},
+		{
+			"src": "^\\/api\\/auth\\/signin\\/?$",
+			"dest": "_render"
+		},
+		{
+			"src": "^\\/api\\/auth\\/signout\\/?$",
+			"dest": "_render"
+		},
+		{
+			"src": "^\\/api\\/check-nickname\\/?$",
+			"dest": "_render"
+		},
+		{
+			"src": "^\\/api\\/follow-actions\\/?$",
+			"dest": "_render"
+		},
+		{
+			"src": "^\\/api\\/profile\\/?$",
+			"dest": "_render"
+		},
+		{
+			"src": "^\\/api\\/update-all-user\\/?$",
+			"dest": "_render"
+		},
+		{
+			"src": "^\\/auth\\/register\\/?$",
+			"dest": "_render"
+		},
+		{
+			"src": "^\\/auth\\/signin\\/?$",
+			"dest": "_render"
+		},
+		{
+			"src": "^\\/biologia\\/?$",
+			"dest": "_render"
+		},
+		{
+			"src": "^\\/dashboard\\/?$",
+			"dest": "_render"
+		},
+		{
+			"src": "^\\/develop\\/?$",
+			"dest": "_render"
+		},
+		{
+			"src": "^\\/histologia\\/?$",
+			"dest": "_render"
+		},
+		{
+			"src": "^\\/microbiologia\\/?$",
+			"dest": "_render"
+		},
+		{
+			"src": "^\\/parasitologia\\/?$",
+			"dest": "_render"
+		},
+		{
+			"src": "^\\/testing\\/?$",
+			"dest": "_render"
+		},
+		{
+			"src": "^\\/user\\/([^/]+?)\\/?$",
+			"dest": "_render"
+		},
+		{
+			"src": "^\\/$",
+			"dest": "_render"
+		}
+	]
+}
