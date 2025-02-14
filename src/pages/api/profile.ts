@@ -9,7 +9,7 @@ export const GET: APIRoute = async ({ request, cookies }) => {
   // En el "front" ya me asegure que haya una session, asi que en el back no es necesario, solo la pido
   const session:any = await getSession(cookies);
 
-  console.log("Se obtuvo la session", session.data);
+  console.log("Se obtuvo la cookie", cookies.get("bv-access-token"));
 
 
   // BD fetch
