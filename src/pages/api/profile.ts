@@ -1,9 +1,15 @@
 import type { APIRoute } from "astro";
 import { supabase } from "@/lib/supabase";
+import { getSession } from "@lib/helpers";
 
-export const GET: APIRoute = async ({ request }) => {
+export const GET: APIRoute = async ({ request, cookies }) => {
   const dataRequest = request.headers.get("id")!;
   const typeofid = request.headers.get("typeofid")!;
+
+  // En el "front" ya me asegure que haya una session, asi que en el back no es necesario, solo la pido
+  const session:any = await getSession(cookies);
+
+  console.log("Se obtuvo la session", session.data);
 
 
   // BD fetch
