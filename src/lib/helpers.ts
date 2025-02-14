@@ -40,6 +40,6 @@ export async function getSession(cookies: any) {
 export function getUrl() {
   return import.meta.env.DEV
   ? "http://localhost:4321"
-  : "https://qpets.vercel.app";
+  : "https://bibliovet.vercel.app";
 }
 

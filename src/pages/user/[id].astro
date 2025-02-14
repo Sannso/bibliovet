@@ -12,7 +12,7 @@ export const prerender = false;
 const { id } = Astro.params;
 const url = import.meta.env.DEV
   ? "http://localhost:4321"
-  : "https://qpets.vercel.app";
+  : "https://bibliovet.vercel.app";
 
 const sessionData = await getSession(Astro.cookies);
 if(!sessionData.status){

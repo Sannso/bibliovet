@@ -43,7 +43,7 @@ try {
 //Obtener la informacion del usuario de la base de datos
 const url = import.meta.env.DEV
   ? "http://localhost:4321"
-  : "https://qpets.vercel.app";
+  : "https://bibliovet.vercel.app";
 
 const response = await fetch(url + "/api/profile", {
   method: "GET",
@@ -290,7 +290,7 @@ if (data[0].nickname == null) {
   const checkNickname = document.getElementById("check-nickname"); // Button
   const url = import.meta.env.DEV
     ? "http://localhost:4321"
-    : "https://qpets.vercel.app";
+    : "https://bibliovet.vercel.app";
   checkNickname?.addEventListener("click", async () => {
     const nickname = document.getElementById("nickname") as HTMLInputElement; // Input
     const checkAlert = document.getElementById(

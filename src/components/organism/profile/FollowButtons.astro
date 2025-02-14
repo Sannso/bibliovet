@@ -55,7 +55,7 @@ const { buttonState, id, buttonContent} = Astro.props;
       const buttonValue = document.querySelector("#follow-button span")!;
       const url = import.meta.env.DEV
         ? "http://localhost:4321"
-        : "https://qpets.vercel.app";
+        : "https://bibliovet.vercel.app";
   
       if (followButton.dataset.followState == "follow") {
         await fetch(`${url}/api/follow-actions`, {
