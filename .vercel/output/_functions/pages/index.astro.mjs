@@ -1,7 +1,7 @@
 /* empty css                                    */
 import { c as createComponent, a as createAstro, r as renderTemplate, f as renderScript, g as renderComponent, m as maybeRenderHead } from '../chunks/astro/server_B7PLLljb.mjs';
 import 'kleur/colors';
-import { $ as $$Layout } from '../chunks/Layout_Cu1PB-w6.mjs';
+import { $ as $$Layout } from '../chunks/Layout_7Jh5Z2yE.mjs';
 import { i as index } from '../chunks/es_BWUqs16E.mjs';
 import { R as RightIcon } from '../chunks/homeIcons_Dsrvimhv.mjs';
 /* empty css                                 */

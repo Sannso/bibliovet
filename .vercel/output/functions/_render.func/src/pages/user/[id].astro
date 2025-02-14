@@ -6,6 +6,8 @@ import UserDetails from "@components/organism/profile/UserDetails.astro";
 import UserArticles from "@components/organism/profile/UserArticles.astro";
 import SocialHeader from "@components/organism/SocialHeader.astro";
 
+export const prerender = false;
+
 // --------------- Logica back de la vista ---------------
 const { id } = Astro.params;
 const url = import.meta.env.DEV

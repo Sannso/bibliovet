@@ -1,13 +1,14 @@
 /* empty css                                       */
 import { c as createComponent, a as createAstro, r as renderTemplate, g as renderComponent, m as maybeRenderHead } from '../../chunks/astro/server_B7PLLljb.mjs';
 import 'kleur/colors';
-import { $ as $$Layout } from '../../chunks/Layout_Cu1PB-w6.mjs';
+import { $ as $$Layout } from '../../chunks/Layout_7Jh5Z2yE.mjs';
 import { g as getSession } from '../../chunks/helpers_C4tQHmo0.mjs';
 import { s as supabase } from '../../chunks/supabase_DGtTifTM.mjs';
 import { $ as $$SocialHeader, a as $$UserDetails, b as $$UserArticles } from '../../chunks/UserDetails_q84UdFlG.mjs';
 export { renderers } from '../../renderers.mjs';
 
 const $$Astro = createAstro();
+const prerender = false;
 const $$id = createComponent(async ($$result, $$props, $$slots) => {
   const Astro2 = $$result.createAstro($$Astro, $$props, $$slots);
   Astro2.self = $$id;
@@ -38,6 +39,7 @@ const _page = /*#__PURE__*/Object.freeze(/*#__PURE__*/Object.defineProperty({
   __proto__: null,
   default: $$id,
   file: $$file,
+  prerender,
   url: $$url
 }, Symbol.toStringTag, { value: 'Module' }));
 

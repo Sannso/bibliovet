@@ -1,10 +1,11 @@
 /* empty css                                       */
 import { c as createComponent, a as createAstro, r as renderTemplate, g as renderComponent, m as maybeRenderHead } from '../../chunks/astro/server_B7PLLljb.mjs';
 import 'kleur/colors';
-import { $ as $$Layout } from '../../chunks/Layout_Cu1PB-w6.mjs';
+import { $ as $$Layout } from '../../chunks/Layout_7Jh5Z2yE.mjs';
 export { renderers } from '../../renderers.mjs';
 
 const $$Astro = createAstro();
+const prerender = false;
 const $$Signin = createComponent(($$result, $$props, $$slots) => {
   const Astro2 = $$result.createAstro($$Astro, $$props, $$slots);
   Astro2.self = $$Signin;
@@ -24,6 +25,7 @@ const _page = /*#__PURE__*/Object.freeze(/*#__PURE__*/Object.defineProperty({
   __proto__: null,
   default: $$Signin,
   file: $$file,
+  prerender,
   url: $$url
 }, Symbol.toStringTag, { value: 'Module' }));
 

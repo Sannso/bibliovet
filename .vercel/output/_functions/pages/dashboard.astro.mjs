@@ -1,7 +1,7 @@
 /* empty css                                    */
 import { c as createComponent, r as renderTemplate, m as maybeRenderHead, f as renderScript, a as createAstro, g as renderComponent } from '../chunks/astro/server_B7PLLljb.mjs';
 import 'kleur/colors';
-import { $ as $$Layout } from '../chunks/Layout_Cu1PB-w6.mjs';
+import { $ as $$Layout } from '../chunks/Layout_7Jh5Z2yE.mjs';
 import { s as supabase } from '../chunks/supabase_DGtTifTM.mjs';
 import { $ as $$SocialHeader, a as $$UserDetails, b as $$UserArticles } from '../chunks/UserDetails_q84UdFlG.mjs';
 import 'clsx';
@@ -19,6 +19,7 @@ Recomendación: Sube una imagen con un tamaño menor a 30KB. Puedes usar
 }, "E:/programacion/Sanss/BiblioVet/bibliovet/src/components/organism/modals/ErrorModal.astro", void 0);
 
 const $$Astro = createAstro();
+const prerender = false;
 const $$Index = createComponent(async ($$result, $$props, $$slots) => {
   const Astro2 = $$result.createAstro($$Astro, $$props, $$slots);
   Astro2.self = $$Index;
@@ -97,6 +98,7 @@ const _page = /*#__PURE__*/Object.freeze(/*#__PURE__*/Object.defineProperty({
   __proto__: null,
   default: $$Index,
   file: $$file,
+  prerender,
   url: $$url
 }, Symbol.toStringTag, { value: 'Module' }));
 
