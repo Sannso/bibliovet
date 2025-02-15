@@ -14,6 +14,7 @@ if (!sessionData.session) {
       path: "/",
     });
 } else {
+  console.log("vamos a ver:", sessionData)
   return  Astro.redirect("/dashboard");
 }
 ---
