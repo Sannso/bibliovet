@@ -1,5 +1,6 @@
 ---
 import Layout from "@layouts/Layout.astro";
+import { getSession } from "@lib/helpers";
 
 export const prerender = false;
 
@@ -8,7 +9,9 @@ const { cookies } = Astro;
 const accessToken = cookies.get("bv-access-token");
 const refreshToken = cookies.get("bv-refresh-token");
 
-if (accessToken && refreshToken) {
+const {status} = await getSession(Astro.cookies);
+
+if (accessToken && refreshToken && status) {
   return  Astro.redirect("/dashboard");
 }
 ---
