@@ -3,7 +3,6 @@ import { supabase } from "@/lib/supabase";
 export async function getSession(cookies: any) {
   const accessToken = cookies.get("bv-access-token");
   const refreshToken = cookies.get("bv-refresh-token");
-  console.log("Token que habia:", accessToken.value)
 
   const data = { session: <any>{}, status: true, token: accessToken.value};
 
@@ -34,7 +33,12 @@ export async function getSession(cookies: any) {
     data.status = false;
   }
 
-  console.log("Token nuevo?:", session?.data.session?.access_token)
+  cookies.set("bv-access-token", session?.data.session?.access_token, {
+    path: "/",
+  });
+  cookies.set("bv-refresh-token", session?.data.session?.refresh_token, {
+    path: "/",
+  });
   return data;
 }
 

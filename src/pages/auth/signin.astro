@@ -6,7 +6,7 @@ export const prerender = false;
 
 const { cookies } = Astro;
 const { data: sessionData, error } = await supabase.auth.getSession();
-if (sessionData == null) {
+if (!sessionData) {
   cookies.delete("bv-access-token", {
       path: "/",
     });
@@ -14,6 +14,7 @@ if (sessionData == null) {
       path: "/",
     });
 } else {
+  console.log("vamos a ver:", sessionData)
   return  Astro.redirect("/dashboard");
 }
 ---
