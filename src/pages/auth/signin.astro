@@ -5,13 +5,10 @@ import { getSession } from "@lib/helpers";
 export const prerender = false;
 
 const { cookies } = Astro;
+const {status, session} = await getSession(cookies);
 
-const accessToken = cookies.get("bv-access-token");
-const refreshToken = cookies.get("bv-refresh-token");
-
-const {status} = await getSession(Astro.cookies);
-
-if (accessToken && refreshToken && status) {
+console.log("sesion what:", session)
+if (status) {
   return  Astro.redirect("/dashboard");
 }
 ---
