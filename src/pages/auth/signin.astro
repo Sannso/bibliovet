@@ -7,7 +7,6 @@ export const prerender = false;
 const { cookies } = Astro;
 const {status, session} = await getSession(cookies);
 
-console.log("sesion what:", session)
 if (status) {
   return  Astro.redirect("/dashboard");
 }
