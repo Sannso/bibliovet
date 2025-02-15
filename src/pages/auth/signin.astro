@@ -1,14 +1,12 @@
 ---
 import Layout from "@layouts/Layout.astro";
-import { getSession } from "@lib/helpers";
 import { supabase } from "@lib/supabase";
 
 export const prerender = false;
 
 const { cookies } = Astro;
-console.log("token is: ", Astro.cookies.get("bv-access-token"))
 const { data: sessionData, error } = await supabase.auth.getSession();
-if (error) {
+if (sessionData == null) {
   cookies.delete("bv-access-token", {
       path: "/",
     });
@@ -16,7 +14,6 @@ if (error) {
       path: "/",
     });
 } else {
-  console.log("Token is luego:", sessionData)
   return  Astro.redirect("/dashboard");
 }
 ---
