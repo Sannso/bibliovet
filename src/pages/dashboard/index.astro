@@ -4,21 +4,21 @@ import SocialHeader from "@components/organism/SocialHeader.astro";
 import ErrorModal from "@components/organism/modals/ErrorModal.astro";
 import UserArticles from "@components/organism/profile/UserArticles.astro";
 import UserDetails from "@components/organism/profile/UserDetails.astro";
-import { getSession } from "@lib/helpers";
 import { getUrl } from "@lib/helpers";
+import { getUserFromCookies } from "@lib/auth";
 
 export const prerender = false;
 
-const {session, status, token} = await getSession(Astro.cookies)
-if (!status) {
-  return Astro.redirect("/auth/signin");
+const user = await getUserFromCookies(Astro.cookies);
+if (!user) {
+  return Astro.redirect('/auth/signin');
 }
-
 //Obtener la informacion del usuario de la base de datos
 const url = getUrl()
+const token = Astro.cookies.get('bv-access-token')!.value
 const response = await fetch(url + "/api/profile", {
   method: "GET",
-  headers: { id: session.data.user!.id, typeOfId: "uuid", token: token },
+  headers: { id: user.id, typeOfId: "uuid", token: token },
 });
 
 const { data, image, contributions} = await response.json();

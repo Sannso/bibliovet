@@ -1,11 +1,11 @@
 import type { APIRoute } from "astro";
 import { supabase, supabaseAuth } from "@/lib/supabase";
-import { getSession } from "@lib/helpers";
+import { getUserFromCookies } from "@lib/auth";
 
 export const POST: APIRoute = async ({ request, cookies }) => {
   const { follow_state, following_id } = await request.json();
 
-  const { data:user, error } = await supabase
+  const { data:userData, error } = await supabase
     .from("user_related")
     .select("uuid")
     .eq("id", following_id);
@@ -20,20 +20,20 @@ export const POST: APIRoute = async ({ request, cookies }) => {
     );
   }
 
-  const session = await getSession(cookies);
+  const user = await getUserFromCookies(cookies);
   const token = cookies.get("bv-access-token")!.value; 
   if (follow_state == "follow") {
     await supabaseAuth(token)
       .from("followers")
       .insert({
-        user_uuid: session.session.data.user!.id,
-        follower_uuid: user![0].uuid,
+        user_uuid: user!.id,
+        follower_uuid: userData![0].uuid,
       });
   } else {
     await supabaseAuth(token)
       .from("followers")
       .delete()
-      .eq("user_uuid", session.session.data.user!.id);
+      .eq("user_uuid", user!.id);
   }
 
   return new Response(

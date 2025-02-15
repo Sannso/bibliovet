@@ -1,32 +1,32 @@
 ---
 import Layout from "@layouts/Layout.astro";
-import { getSession } from "@lib/helpers";
+import { getUrl } from "@lib/helpers";
 import { supabase } from "@/lib/supabase";
 import UserDetails from "@components/organism/profile/UserDetails.astro";
 import UserArticles from "@components/organism/profile/UserArticles.astro";
 import SocialHeader from "@components/organism/SocialHeader.astro";
+import { getUserFromCookies } from "@lib/auth";
 
 export const prerender = false;
 
 // --------------- Logica back de la vista ---------------
 const { id } = Astro.params;
-const url = import.meta.env.DEV
-  ? "http://localhost:4321"
-  : "https://bibliovet.vercel.app";
+const url = getUrl()
+const user = await getUserFromCookies(Astro.cookies);
 
-const sessionData = await getSession(Astro.cookies);
-if(!sessionData.status){
-    return Astro.redirect(url + "/auth/signin");
+if (!user) {
+  return Astro.redirect('/auth/signin');
 }
 
+
 // Una vez asegurado que hay un incio de sesion, verificamos si es el mismo o no
-const { data:user } = await supabase
+const { data:dataUser } = await supabase
     .from("user_related")
     .select()
-    .eq("uuid", sessionData.session.data.user!.id);
+    .eq("uuid", user.id);
 
 
-if(user![0].id == id){
+if(dataUser![0].id == id){
     return Astro.redirect(url + "/dashboard");
 }
 

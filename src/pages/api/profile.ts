@@ -1,8 +1,7 @@
 import type { APIRoute } from "astro";
-import { supabase, supabaseAuth } from "@/lib/supabase";
-import { getSession } from "@lib/helpers";
+import { supabaseAuth } from "@/lib/supabase";
 
-export const GET: APIRoute = async ({ request, cookies }) => {
+export const GET: APIRoute = async ({ request }) => {
   const dataRequest = request.headers.get("id")!;
   const typeofid = request.headers.get("typeofid")!;
   const token = request.headers.get("token")!;

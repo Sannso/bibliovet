@@ -21,10 +21,17 @@ export const POST: APIRoute = async ({ request, cookies, redirect }) => {
 
   const { access_token, refresh_token } = data.session;
   cookies.set("bv-access-token", access_token, {
-    path: "/",
+    path: "/",         // Disponibilidad en todas las rutas
+    httpOnly: true,     // No accesible desde JavaScript del lado del cliente
+    secure: true,       // Solo se envía por HTTPS (útil en producción)
+    maxAge: 60 * 60 * 24, // Dura 2 horas
   });
   cookies.set("bv-refresh-token", refresh_token, {
-    path: "/",
+    path: "/",        
+    httpOnly: true,    
+    secure: true,       
+    maxAge: 60 * 60 * 24, 
   });
+  
   return redirect("/dashboard");
 };
