@@ -1,13 +1,20 @@
 ---
 import Layout from "@layouts/Layout.astro";
 import { getSession } from "@lib/helpers";
+import { supabase } from "@lib/supabase";
 
 export const prerender = false;
 
 const { cookies } = Astro;
-const {status, session} = await getSession(cookies);
-
-if (status) {
+const { data: sessionData, error } = await supabase.auth.getSession();
+if (error) {
+  cookies.delete("bv-access-token", {
+      path: "/",
+    });
+    cookies.delete("bv-refresh-token", {
+      path: "/",
+    });
+} else {
   return  Astro.redirect("/dashboard");
 }
 ---
