@@ -1,7 +1,7 @@
 ---
 import Layout from "@layouts/Layout.astro";
 import { getUrl } from "@lib/helpers";
-import { supabase } from "@/lib/supabase";
+import { supabaseAuth } from "@/lib/supabase";
 import UserDetails from "@components/organism/profile/UserDetails.astro";
 import UserArticles from "@components/organism/profile/UserArticles.astro";
 import SocialHeader from "@components/organism/SocialHeader.astro";
@@ -20,7 +20,7 @@ if (!user) {
 
 
 // Una vez asegurado que hay un incio de sesion, verificamos si es el mismo o no
-const { data:dataUser } = await supabase
+const { data:dataUser } = await supabaseAuth(Astro.cookies.get("bv-access-token")!.value)
     .from("user_related")
     .select()
     .eq("uuid", user.id);
