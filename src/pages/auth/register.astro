@@ -1,5 +1,6 @@
 ---
 import Layout from "@layouts/Layout.astro";
+import { getUrl } from "@lib/helpers";
 
 export const prerender = false;
 
@@ -11,6 +12,8 @@ const refreshToken = cookies.get("bv-refresh-token");
 if (accessToken && refreshToken) {
   return  Astro.redirect("/dashboard");
 }
+
+const url = getUrl() + '/policies/tyc'
 ---
 
 <Layout title="Register">
@@ -77,7 +80,7 @@ if (accessToken && refreshToken) {
           for="terms"
           class="ms-2 text-sm font-medium text-gray-900 dark:text-gray-300"
           >Acepto los <a
-            href="#"
+            href={url}
             class="text-blue-600 hover:underline dark:text-blue-500"
             >términos y condiciones</a
           ></label

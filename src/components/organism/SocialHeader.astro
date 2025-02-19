@@ -1,5 +1,12 @@
 ---
 import { header } from "@es";
+import { getUserFromCookies } from "@lib/auth";
+
+const user = await getUserFromCookies(Astro.cookies);
+let textButton = "Iniciar Sesión"
+if (user) {
+  textButton = "Cerrar Sesión"
+}
 ---
 
 <script>
@@ -23,8 +30,8 @@ import { header } from "@es";
   </a>
   <form action="/api/auth/signout">
     <button
-      class="text-red-500 opacity-70 font-semibold backdrop-blur-md bg-white bg-opacity-5 rounded-xl shadow-lg px-2.5 py-0.5 hover:bg-opacity-10 transition-colors text-sm lg:text-base"
-      type="submit">Cerrar Sesión</button
+      class={`${textButton == "Iniciar Sesión" ? 'text-white' : 'text-red-500'} opacity-70 font-semibold backdrop-blur-md bg-white bg-opacity-5 rounded-xl shadow-lg px-2.5 py-0.5 hover:bg-opacity-10 transition-colors text-sm lg:text-base`}
+      type="submit">{textButton}</button
     >
   </form>
 </header>

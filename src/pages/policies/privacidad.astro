@@ -1,0 +1,54 @@
+---
+import Layout from "@layouts/Layout.astro";
+import SocialHeader from "@components/organism/SocialHeader.astro";
+import Footer from "@components/organism/Footer.astro";
+---
+
+<Layout title="Terminos y Condiciones">
+  <SocialHeader />
+  <section
+    class={`flex flex-col items-center text-white mt-10 gap-8 px-10
+                  [&>div]:max-w-4xl
+                  [&>div>ol]:flex [&>div>ol]:flex-col [&>div>ol]:gap-5
+                  [&>div>ol>li>span]:text-lime-200 [&>div>ol>li>span]:font-semibold`}
+  >
+    <h1 class="text-3xl font-bold">Políticas de Privacidad</h1>
+    <div>
+      <p>
+        En cumplimiento de la Ley Estatutaria 1581 de 2.012 de Protección de
+        Datos (LEPD) y del Decreto 1377 de 2.103, el presente Aviso de
+        Privacidad tiene como objeto obtener la autorización expresa e informada
+        del Titular para el tratamiento y la transferencia de sus datos a
+        terceras entidades. Las condiciones del tratamiento son las siguientes:
+      </p>
+    </div>
+
+    <div>
+      <ol class="list-decimal ml-5">
+        <li>
+          <strong>Bibliovet</strong> será el responsable del tratamiento de sus datos
+          personales.
+        </li>
+        <li>
+          Con objeto de recibir una atención integral como cliente, los datos
+          personales recabados serán tratados con las siguientes finalidades:
+          propósitos comerciales, información sobre comportamiento; y gestión
+          contable fiscal y Administrativa.
+        </li>
+        <li>
+          La política de tratamiento de los datos del Titular, así como los
+          cambios sustanciales que se produzcan en ésta, se podrán consultar
+          Correo electrónico y pagina Web.
+        </li>
+        <li>
+          El Titular puede ejercitar los derechos de acceso, corrección,
+          supresión, revocación o reclamo por infracción sobre sus datos con un
+          escrito dirigido a <strong>Bibliovet</strong> a la dirección de correo
+          s4nns0o@gmail.com, indicando en el asunto el derecho que desea ejercitar.
+        </li>
+      </ol>
+    </div>
+  </section>
+
+  <Footer />
+</Layout>
